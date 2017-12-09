@@ -1,5 +1,5 @@
 {
-  "name": "desgin",
+  "name": "design",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onface/desgin.git"
+    "url": "git+https://github.com/onface/design.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/onface/desgin/issues"
+    "url": "https://github.com/onface/design/issues"
   },
-  "homepage": "https://github.com/onface/desgin#readme",
+  "homepage": "https://github.com/onface/design#readme",
   "dependencies": {
     "express": "^4.16.2",
     "global": "^4.3.2",
