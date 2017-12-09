@@ -1,0 +1,6 @@
+html {
+    font-family: 'Roboto Slab';
+}
+a {
+    transition: color .3s ease;
+}
