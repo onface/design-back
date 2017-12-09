@@ -11,14 +11,20 @@
     clear: noth;
 }
 .face-one-head-logo {
+    cursor: pointer;
     font-size:1.5em;
     float: left;
     /*color:#2889da;*/
     /*color:#f33f51;*/
-    color:#3e3a69;
+    /*color:#3e3a69;*/
     /*color:#bbb;*/
+    color:#495057;
     min-width: 8em;
     vertical-align: middle;
+    text-decoration: none;
+}
+.face-one-head-logo:hover {
+    color:#2889da;
 }
 .face-one-head-logo-photo {
     width: 1.4em;
@@ -113,6 +119,9 @@
     color:#ced4d9;
 }
 @media screen and (max-width: 750px) {
+    .face-one-head-logo {
+        min-width: auto;
+    }
     .face-one-head-nav-switch {
         cursor: pointer;
         color:#666;
@@ -122,8 +131,9 @@
     }
     .face-one-head-nav-F-cnt {
         display: none;
-        position: relative;
-        left:1em;
+        position: absolute;
+        right:0;
+        top:100%;
         min-width: 8em;
         background-color: white;
         border-radius: .2em;
@@ -139,6 +149,7 @@
         display: none;
     }
     .face-one-head-nav {
+        position: relative;
     }
     .face-one-head-nav-link {
         display: block;
