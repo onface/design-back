@@ -2,6 +2,7 @@
     function markrunSidebar(settings) {
         settings = settings || {}
         settings.content = settings.content || document.body
+        console.log(settings.content)
         var map = {}
         var sidebar = document.createElement('ul')
         var childNodes = settings.content.childNodes

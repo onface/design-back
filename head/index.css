@@ -1,6 +1,6 @@
 .face-one-head {
-    height: 3.5em;
-    line-height: 3.5em;
+    height: 4.5em;
+    line-height: 4.5em;
     box-shadow: 0 2px 8px #f0f1f2;
     border-bottom:1px solid #eee;
     padding-left: 2em;
@@ -60,7 +60,7 @@
     display: inline-block;
     padding-left: 1em;
     padding-right: 1em;
-    line-height: 3.5em;
+    line-height: 4.5em;
     text-decoration: none;
     color: inherit;
 }
@@ -110,7 +110,7 @@
 .face-one-head-search-input {
     border: none;
     padding: 0;
-    line-height: 3.5em;
+    line-height: 4.5em;
     outline: none;
     text-indent: .5em;
     font-size: 0.8em;
@@ -128,7 +128,7 @@
         cursor: pointer;
         color:#666;
         display: block;
-        line-height: 3.5em;
+        line-height: 4.5em;
         text-align: right;
     }
     .face-one-head-nav-F-cnt {

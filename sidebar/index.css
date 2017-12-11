@@ -1,4 +1,5 @@
 .face-one-sidebar {
+    float: right;
     border-left: 1px solid #eee;
     position: fixed;
     position: sticky;
@@ -7,6 +8,7 @@
     width: 8em;
     line-height: 1.6;
     z-index: 10;
+    background-color:white;
 }
 .face-one-sidebar>ul {
     display: block;

@@ -5,9 +5,16 @@
 @import "./head/index.css";
 @import "./nav/index.css";
 @import "./sidebar/index.css";
+@import "./foot/index.css";
+@import "./markdown/index.css";
 .face-one-cnt {
     padding-left: 1em;
 }
 .face-one-layout {
     padding-left: 16em;
+}
+@media screen and (max-width: 750px) {
+    .face-one-layout {
+        padding-left: 0;
+    }
 }
