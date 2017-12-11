@@ -1,4 +1,5 @@
 .face-one-foot {
+    position: relative;
     box-shadow: 0 -2px 3px #f7f7f7;
     border-top:1px solid #eee;
     font-size: .8em;
@@ -66,7 +67,8 @@
         width: auto;
     }
     .face-one-foot-copyright {
-        display: none;
+        position: absolute;
+        right:0;top:5em;
     }
     .face-one-foot-group{
         float: none;
