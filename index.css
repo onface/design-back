@@ -4,3 +4,10 @@
 @import "./icons/css/font-awesome.min.css";
 @import "./head/index.css";
 @import "./nav/index.css";
+@import "./sidebar/index.css";
+.face-one-cnt {
+    padding-left: 1em;
+}
+.face-one-layout {
+    padding-left: 16em;
+}

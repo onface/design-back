@@ -132,9 +132,9 @@
         text-align: right;
     }
     .face-one-head-nav-F-cnt {
-        /*display: none;*/
+        display: none;
         position: absolute;
-        right:-10em;
+        right:-1em;
         top:100%;
         min-width: 8em;
         background-color: white;
@@ -144,7 +144,7 @@
         border-bottom:1px solid #eee;
     }
     .face-one-head-nav--open .face-one-head-nav-F-cnt {
-        right:-1.5em;
+        display: block;
     }
     .face-one-head-slogan,
     .face-one-head-search {

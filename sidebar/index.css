@@ -1,0 +1,34 @@
+.face-one-sidebar {
+    border-left: 1px solid #eee;
+    position: fixed;
+    position: sticky;
+    left:100%;
+    top:1em;
+    width: 8em;
+    line-height: 1.6;
+    z-index: 10;
+}
+.face-one-sidebar>ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+.face-one-sidebar>ul>li{
+    display: block;
+}
+.face-one-sidebar>ul>li>a{
+    display: block;
+    padding-left: 1em;
+    text-decoration: none;
+    color:#495057;
+    font-size: .8em;
+}
+.face-one-sidebar .markdown-sidebar-link--on,
+.face-one-sidebar>ul>li>a:hover {
+    color:#1890ff;
+}
+@media screen and (max-width: 750px) {
+    .face-one-sidebar {
+        display: none;
+    }
+}
