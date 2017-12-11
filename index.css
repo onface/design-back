@@ -7,6 +7,8 @@
 @import "./sidebar/index.css";
 @import "./foot/index.css";
 @import "./markdown/index.css";
+@import "./intro/index.css";
+@import "./feature/index.css";
 .face-one-cnt {
     padding-left: 1em;
 }
