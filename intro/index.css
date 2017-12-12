@@ -30,11 +30,10 @@
     color:#888;
     border:2px solid #888;
     margin-right: .5em;
-    transition: transform .3s ease;
+    transition: box-shadow .3s;
 }
 .face-one-intro-btn:hover {
-    transform: scale(1.04);
-    box-shadow: 0px 0px 3px rgba(11,11,11,.2);
+    box-shadow: 0 0 0 2px rgba(111,111,111,.14);
 }
 .face-one-intro-btn--primary {
     background-color:#2d8cf0;
@@ -42,6 +41,9 @@
     color:white;
     padding-left: 3em;
     padding-right: 3em;
+}
+.face-one-intro-btn--primary:hover {
+    box-shadow: 0 0 0 2px rgba(45,140,240,.2);
 }
 .face-one-intro-btn--primary:hover {
     text-shadow:  0px 0px 3px rgba(11,11,11,.2);
