@@ -1,14 +1,12 @@
 .face-one-nav {
     position: relative;
-    float: left;
-    margin-left: -16em;
+    height: 100%;
     transition: left .3s ease;
 }
 .face-one-nav-F-inner {
     width: 16em;
     height: 100%;
     background-color: white;
-    border-right:1px solid #ededed;
     color:#495057;
     line-height: 2.8;
     box-sizing: border-box;
@@ -42,9 +40,13 @@
 }
 .face-one-nav-item-switch {
     position: absolute;
+    z-index: 1;
     top:.5em;right:1em;
+    transition: transform .3s;
 }
 .face-one-nav-item-label {
+    position: relative;
+    z-index: 1;
     text-indent: 2em;
     display: block;
     color: inherit;
@@ -54,10 +56,12 @@
     background-color: #e6f7ff;
     color:#1890ff;
     border-right:2px solid #1890ff;
-
 }
 .face-one-nav-item-group {
     text-indent: 3em;
+}
+.face-one-nav-item--group-on .face-one-nav-item-switch {
+    transform: rotate(180deg);
 }
 .face-one-nav-item-group-title {
     color:gray;
@@ -105,6 +109,7 @@
     }
     .face-one-nav-F-inner {
         position: relative;
+        overflow-y: auto;
         border-right:none;
         z-index: 2;
         height: 100%;

@@ -9,14 +9,4 @@
 @import "./markdown/index.css";
 @import "./intro/index.css";
 @import "./feature/index.css";
-.face-one-cnt {
-    padding-left: 1em;
-}
-.face-one-layout {
-    padding-left: 16em;
-}
-@media screen and (max-width: 750px) {
-    .face-one-layout {
-        padding-left: 0;
-    }
-}
+@import "./layout/index.css";
