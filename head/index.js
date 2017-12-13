@@ -6,10 +6,12 @@ $(function () {
         var $nav = $this.closest(parentClass)
         $nav.toggleClass(toggleClass)
     })
-    $(document).on('click', function (e) {
+    var removeClass = function (e) {
         if ($(e.target).closest(parentClass).length === 0) {
             var $nav = $(parentClass)
             $nav.removeClass(toggleClass)
         }
-    })
+    }
+    $(document).on('click', removeClass)
+    document.addEventListener('touchstart', removeClass)
 })
