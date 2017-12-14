@@ -6,7 +6,7 @@
 }
 .face-one-intro-title {
     font-size: 3em;
-    color:#2889da;
+    color:#4688f1;
 }
 .face-one-intro-desc {
     display: inline-block;
@@ -36,8 +36,8 @@
     box-shadow: 0 0 0 2px rgba(111,111,111,.14);
 }
 .face-one-intro-btn--primary {
-    background-color:#2d8cf0;
-    border-color: #2d8cf0;
+    background-color:#4688f1;
+    border-color: #4688f1;
     color:white;
     padding-left: 3em;
     padding-right: 3em;
