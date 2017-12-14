@@ -140,19 +140,6 @@ html .face-btn {
 html .face-btn-loading-spin {
     animation: face-btn-spin 1.5s infinite linear;
 }
-.face-btn--icon.face-btn--loading .face-btn-loading {
-    position: absolute;
-    left:-1px;top:-1px;
-    border-radius: 50%;
-    width: 100%;
-    height: 100%;
-    box-sizing: content-box;
-    padding:2px;
-    text-align: center;
-    vertical-align: middle;
-    background-color: rgba(255,255,255,.4);
-    animation:face-btn-loading 1s linear infinite;
-}
 .face-btn--icon.face-btn--loading .face-btn-loading>* {
     display: none;
 }
@@ -162,7 +149,9 @@ html .face-btn-loading-spin {
 .face-btn--icon {
     padding-left: 0;
     padding-right: 0;
-    min-width: 2em;
+    width: 2.1em;
+    height: 2em;
+    overflow: hidden;
     text-align: center;
     border-radius: 50%;
 }
