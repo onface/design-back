@@ -87,6 +87,18 @@
                     <li>webpack</li>
                     <li>logic</li>
                 </ol>
+                <div id="buttonRender"></div>
+                <link rel="stylesheet" href="./components/btn/index.css" />
+                <script>
+                document.onreadystatechange = function () {
+                    $.ajax({
+                        type: 'get',
+                        url: './components/btn/index.html'
+                    }).done(function (html) {
+                        $('#buttonRender').html(html)
+                    })
+                }
+                </script>
             </div>
         </div>
     </div>
