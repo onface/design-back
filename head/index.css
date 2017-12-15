@@ -50,6 +50,7 @@
     text-decoration: none;
 }
 .face-one-head-nav-F-cnt {
+    z-index: 10;
     display: inline-block;
     transition: right .3s ease;
 }
