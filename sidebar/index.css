@@ -3,31 +3,36 @@
     border-left: 1px solid #eee;
     position: fixed;
     position: sticky;
-    left:100%;
     top:1em;
+    margin-right: -9em;
     width: 8em;
     line-height: 1.6;
     z-index: 10;
     background-color:white;
 }
-.face-one-sidebar>ul {
+html .face-one-sidebar>ul {
     display: block;
     padding: 0;
     margin: 0;
 }
-.face-one-sidebar>ul>li{
+html .face-one-sidebar>ul>li{
     display: block;
+    margin-top: 0;
 }
 .face-one-sidebar>ul>li>a{
+    border-left: 1px solid transparent;
     display: block;
     padding-left: 1em;
     text-decoration: none;
     color:#495057;
     font-size: .8em;
+    margin-left: -1px;
 }
 .face-one-sidebar .markdown-sidebar-link--on,
 .face-one-sidebar>ul>li>a:hover {
     color:#1890ff;
+    border-left:1px solid #1890ff;
+    text-decoration: none;
 }
 @media screen and (max-width: 750px) {
     .face-one-sidebar {

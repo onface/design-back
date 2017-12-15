@@ -17,6 +17,7 @@
     padding-left: 1em;
     padding-right: 1em;
     width: 99%;
+    padding-right: 9em;
     display: table-cell;
     vertical-align:top;
     border-left:1px solid #eee;
@@ -24,5 +25,7 @@
 @media screen and (max-width: 750px) {
     .face-one-layout-cnt {
         border-left: none;
+        padding-left: .5em;
+        padding-right: .5em;
     }
 }

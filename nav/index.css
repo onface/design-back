@@ -12,7 +12,7 @@
     box-sizing: border-box;
     transition: opacity .3s ease;
 }
-.face-one-nav-switch {
+html .face-one-nav-switch {
     display: none;
     border-radius: .1em;
     padding:.8em 1em;
@@ -80,7 +80,7 @@
     border-right:2px solid #1890ff;
 }
 @media screen and (max-width: 750px) {
-    .face-one-nav-switch {
+    html .face-one-nav-switch {
         display: inline-block;
     }
     .face-one-nav {
