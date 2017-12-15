@@ -2,10 +2,6 @@
     border:1px solid #eee;
     border-radius: .2em;
     margin-bottom: 1em;
-    transition: box-shadow .3s;
-}
-.face-one-code:hover {
-    box-shadow: 0px 0px 3px rgba(11,11,11,.1);
 }
 .face-one-code-example {
     padding: 1em;
