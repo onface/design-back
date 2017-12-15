@@ -15,6 +15,7 @@
 }
 .face-one-layout-cnt {
     padding-left: 1em;
+    padding-right: 1em;
     width: 99%;
     display: table-cell;
     vertical-align:top;

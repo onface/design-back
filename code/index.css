@@ -1,0 +1,69 @@
+.face-one-code {
+    border:1px solid #eee;
+    border-radius: .2em;
+    margin-bottom: 1em;
+    transition: box-shadow .3s;
+}
+.face-one-code:hover {
+    box-shadow: 0px 0px 3px rgba(11,11,11,.1);
+}
+.face-one-code-example {
+    padding: 1em;
+}
+.face-one-code-info {
+    border-top:1px solid #eee;
+    position: relative;
+}
+.face-one-code-info-title {
+    background-color: white;
+    padding-left: .5em;
+    padding-right: .5em;
+    /*position: absolute;
+    left:1em;top:-5em;*/
+    float: left;
+    margin-top: -0.8em;
+    margin-left: 1em;
+    font-weight: 600;
+}
+.face-one-code-info-desc {
+    padding: 1em;
+    padding-top: .4em;
+    clear: both;
+}
+.face-one-code-info-switchCode {
+    position: absolute;
+    right:.5em;bottom:.5em;
+    transition: color .3s;
+    font-size: .8em;
+}
+.face-one-code-source-tool-preview:hover,
+.face-one-code-source-tool-copy:hover,
+.face-one-code-info-switchCode:hover {
+    cursor: pointer;
+    color:#1890ff;
+}
+.face-one-code-source {
+    position: relative;
+    display: none;
+}
+.face-one-code-source>pre {
+    border-top:1px dashed #ddd;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-bottom: 0;
+}
+.face-one-code-source-tool {
+    position: absolute;
+    top:1em;right:.5em;
+}
+html .face-one-code-source-tool-preview,
+html .face-one-code-source-tool-copy {
+    transition: color .3s;
+    margin-left: .2em;
+    font-size: .8em;
+}
+.face-one-code-source-tool-preview {}
+.face-one-code-source-tool-copy {}
+    .face-one-code--open .face-one-code-source {
+    display: block;
+}

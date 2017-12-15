@@ -66,8 +66,8 @@
 
 
 markrunSidebar({
-    element: document.getElementById('face-sidebar'),
-    content: document.getElementById('face-cnt'),
+    element: document.getElementById('face-one-sidebar'),
+    content: document.getElementById('face-one-cnt'),
 })
 var intersectionObserver = new IntersectionObserver(function (entries) {
     if (!entries[0].isIntersecting) {
@@ -80,6 +80,6 @@ $('.markdown-sidebar-link').on('click', function () {
     $('.markdown-sidebar-link--on').removeClass('markdown-sidebar-link--on')
     $(this).addClass('markdown-sidebar-link--on')
 })
-$('#face-cnt h2').each(function () {
+$('#face-one-cnt h2').each(function () {
     intersectionObserver.observe(this)
 })
