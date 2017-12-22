@@ -1,38 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
-    <link rel="stylesheet" href="./face.less">
-</head>
-<body>
-<div class="face-one-head">
-    <a class="face-one-head-logo" href="/">
-        <img src="./media/logo.svg" alt="" class="face-one-head-logo-photo">
-        face
-    </a>
-    <span class="face-one-head-slogan">
-        Write less code, do more things!
-    </span>
-    <!-- <div class="face-one-head-search">
-        <span class="face-one-head-search-icon fi fi-search"></span>
-        <input type="text" class="face-one-head-search-input" placeholder="搜索..." />
-    </div> -->
-    <div class="face-one-head-nav">
-        <span class="face-one-head-nav-switch fi fi-bars"></span>
-        <div class="face-one-head-nav-F-cnt">
-            <a href="./index.html" class="face-one-head-nav-link face-one-head-nav-link--on">首页</a>
-            <a href="./doc.html" class="face-one-head-nav-link">指引</a>
-            <a href="./doc.html" class="face-one-head-nav-link">组件</a>
-            <!-- <select name="" class="face-one-head-nav-version">
-                <option value="0.0.1">0.0.1</option>
-            </select> -->
-            <a href="./doc.html" class="face-one-head-nav-lang">English</a>
-        </div>
-    </div>
-</div>
+<link rel="import" href="/template/doctype.html?__inline">
+<title>首页</title>
+<link rel="import" href="/template/head-and-body-tag.html?__inline">
+<link rel="import" href="/template/nav.html?__inline">
 <div class="face-one-intro">
     <div class="face-one-intro-title">face</div>
     <h2 class="face-one-intro-desc">
@@ -60,54 +29,5 @@
         <div class="face-one-feature-item-desc">提供业务逻辑封装，快速开发</div>
     </div>
 </div>
-<div class="face-one-foot">
-    <div class="face-one-foot-F-inner">
-        <div class="face-one-foot-group">
-            <div class="face-one-foot-group-title">
-                <span class="face-one-foot-group-title-icon fi fi-github"></span>
-                Github
-            </div>
-            <div class="face-one-foot-group-item">
-                <a href="https://onface.github.io/face.react" class="face-one-foot-group-item-link">face.react</a>
-                - 项目源码
-            </div>
-        </div>
-        <div class="face-one-foot-group">
-            <div class="face-one-foot-group-title">
-                <span class="face-one-foot-group-title-icon fi fi-link"></span>
-                相关站点
-            </div>
-            <div class="face-one-foot-group-item">
-                <a href="https://github.com/onface/react" class="face-one-foot-group-item-link">react</a>
-                - React 开源项目脚手架
-            </div>
-            <div class="face-one-foot-group-item">
-                <a href="http://onface.cc/" class="face-one-foot-group-item-link">onface.cc</a>
-                - 资源集合
-            </div>
-        </div>
-        <div class="face-one-foot-group">
-            <div class="face-one-foot-group-title">
-                <span class="face-one-foot-group-title-icon fi fi-users"></span>
-                社区
-            </div>
-            <div class="face-one-foot-group-item">
-                <a href="https://github.com/onface/face.react/issues" class="face-one-foot-group-item-link">Github issues</a>
-            </div>
-            <div class="face-one-foot-group-item">
-                <a href="https://github.com/onface/face.react/issues/new" class="face-one-foot-group-item-link">提交bug</a>
-            </div>
-        </div>
-        <div class="face-one-foot-copyright">
-            <a href="./doc.html" class="face-one-foot-copyright-title">
-                <img src="./media/logo.svg" alt="" class="face-one-foot-copyright-title-logo">
-            </a>
-        </div>
-    </div>
-</div>
-<script src="https://unpkg.com/jquery@1.12.4/dist/jquery.min.js"></script>
-<script src="./head/index.js"></script>
-<script src="./nav/index.js"></script>
-<script src="./sidebar/index.js"></script>
-</body>
-</html>
+<link rel="import" href="/template/foot.html?__inline">
+<link rel="import" href="/template/end.html?__inline">

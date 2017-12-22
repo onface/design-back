@@ -65,21 +65,23 @@
 })()
 
 
-markrunSidebar({
-    element: document.getElementById('face-one-sidebar'),
-    content: document.getElementById('face-one-cnt'),
-})
-var intersectionObserver = new IntersectionObserver(function (entries) {
-    if (!entries[0].isIntersecting) {
-        return
-    }
-    $('.markdown-sidebar-link--on').removeClass('markdown-sidebar-link--on')
-    $('.markdown-sidebar-link[href="#' + entries[0].target.id + '"]').addClass('markdown-sidebar-link--on')
-})
-$('.markdown-sidebar-link').on('click', function () {
-    $('.markdown-sidebar-link--on').removeClass('markdown-sidebar-link--on')
-    $(this).addClass('markdown-sidebar-link--on')
-})
-$('#face-one-cnt h2').each(function () {
-    intersectionObserver.observe(this)
-})
+if (document.getElementById('face-one-sidebar')) {
+    markrunSidebar({
+        element: document.getElementById('face-one-sidebar'),
+        content: document.getElementById('face-one-cnt'),
+    })
+    var intersectionObserver = new IntersectionObserver(function (entries) {
+        if (!entries[0].isIntersecting) {
+            return
+        }
+        $('.markdown-sidebar-link--on').removeClass('markdown-sidebar-link--on')
+        $('.markdown-sidebar-link[href="#' + entries[0].target.id + '"]').addClass('markdown-sidebar-link--on')
+    })
+    $('.markdown-sidebar-link').on('click', function () {
+        $('.markdown-sidebar-link--on').removeClass('markdown-sidebar-link--on')
+        $(this).addClass('markdown-sidebar-link--on')
+    })
+    $('#face-one-cnt h2').each(function () {
+        intersectionObserver.observe(this)
+    })
+}
