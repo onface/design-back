@@ -14,16 +14,8 @@
     background-color: #bce8ff;
     display: block;
     width: 100%;
+    outline: 1px solid white;
 }
-.face-row {
-    margin-bottom: 10px;
-}
-.face-row [class^="face-col-"] {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-padding-left: 10px;
-padding-right: 10px;
 </style>
     <h2>栅格</h2>
     <p>
@@ -64,6 +56,18 @@ padding-right: 10px;
     </div>
     <div class="face-row">
         <div class="face-col-12"><span class="col-placeholder">12</span></div><div class="face-col-12"><span class="col-placeholder">12</span></div>
+    </div>
+    <div class="face-row">
+        <div class="face-col-12"><span class="col-placeholder">12</span></div><div class="face-col-2 face-offset-10"><span class="col-placeholder">2 offset-10</span></div>
+    </div>
+    <div class="face-row">
+        <div class="face-col-12"><span class="col-placeholder">12</span></div><div class="face-col-7 face-offset-5"><span class="col-placeholder">7 offset-5</span></div>
+    </div>
+    <div class="face-row">
+        <div class="face-col-11"><span class="col-placeholder">11</span></div><div class="face-col-11 face-offset-2"><span class="col-placeholder">11 offset-2</span></div>
+    </div>
+    <div class="face-row">
+        <div class="face-col-12"><div style="padding-right:10px;" ><span class="col-placeholder">12-10px</span></div></div><div class="face-col-12"><div style="paddin-left:10px;"><span class="col-placeholder">12-10px</span></div></div>
     </div>
 </body>
 </html>

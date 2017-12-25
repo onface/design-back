@@ -15,5 +15,8 @@
   .face-col-@{i} {
     width: (@i * 100% / @n);
   }
+  .face-offset-@{i} {
+      margin-left: (@i * 100% / @n);
+  }
   .face-row-generate-columns(@n, (@i + 1));
 }
