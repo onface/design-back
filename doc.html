@@ -76,7 +76,10 @@
                     <div class="face-one-code-source">
                         <div class="face-one-code-source-tool">
                             <form action="https://codepen.io/pen/define" method="post" target="_blank" >
-                                <input type="text" name="data" value='{ "title": "标题", "html": "html", "js": "console.log("js")", "css": "body{color:red;}", "editors": "001", "css_external": "", "js_external": "https://unpkg.com/react@15.x/dist/react.js;https://unpkg.com/react-dom@15.x/dist/react-dom.js;", "js_pre_processor": "react" }' >
+                                <input type="text" name="data" value='' id="demo" >
+                                <script>
+                                    document.getElementById('demo').value = JSON.stringify({ "title": "1标题", "html": "html", "js": "console.log(\"js\");console.log(`\r\nsome\r\n`)", "css": "body{color:red;}", "editors": "001", "css_external": "", "js_external": "https://unpkg.com/react@15.x/dist/react.js;https://unpkg.com/react-dom@15.x/dist/react-dom.js;", "js_pre_processor": "Babel" })
+                                </script>
                                 <button type="submit" >submit</button>
                             </form>
                             <span class="face-one-code-source-tool-preview fi fi-codepen"></span>
