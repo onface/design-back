@@ -1,0 +1,29 @@
+.face-breadcrumb {
+    font-size:1em;
+}
+.face-breadcrumb-link {
+    color:#555;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color .3s;
+    &:hover {
+        color:#2d8cf0;
+    }
+}
+.face-breadcrumb-separator {
+    color:#666;
+    margin-left: .2em;
+    margin-right:.2em;
+    &:after {
+        content: '/';
+    }
+}
+.face-breadcrumb span:last-child {
+    .face-breadcrumb-link {
+        color: #222;
+        cursor: inherit;
+    }
+    .face-breadcrumb-separator {
+        display: none;
+    }
+}
