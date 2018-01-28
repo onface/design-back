@@ -77,7 +77,7 @@ html .face-btn {
 }
 
 
-.faceButtonStyle(@type, @color) {
+.faceButtonStyle(@color) {
         background-color: @color;
         background-image: -webkit-linear-gradient(top,@color, darken(@color, 3%));
         border-color: darken(@color, 3%);
@@ -85,7 +85,6 @@ html .face-btn {
         &.face-btn--clicked:before {
             border-color:lighten(@color, 3%);
         }
-        // &.face-btn--@type
         &.face-btn--ghost{
           border-color:@color;
           color: @color;
@@ -96,6 +95,9 @@ html .face-btn {
         &.face-btn--dashed {
             border-color: @color;
         }
+        &:focus {
+            box-shadow: 0 0 0 0.15em lighten(@color, 25%);
+        }
         &.face-btn--loading {
             background: linear-gradient(90deg, @color 50%, darken(@color, 3%));
             background-size: .6em;
@@ -103,19 +105,19 @@ html .face-btn {
 
 }
 .face-btn--primary {
-    .faceButtonStyle('primary', @face-btn--primary-color)
+    .faceButtonStyle(@face-btn--primary-color)
 }
 .face-btn--danger {
-    .faceButtonStyle('danger', @face-btn--danger-color)
+    .faceButtonStyle(@face-btn--danger-color)
 }
 .face-btn--warning {
-    .faceButtonStyle('warning', @face-btn--warning-color)
+    .faceButtonStyle(@face-btn--warning-color)
 }
 .face-btn--info {
-    .faceButtonStyle('info', @face-btn--info-color)
+    .faceButtonStyle(@face-btn--info-color)
 }
 .face-btn--success {
-    .faceButtonStyle('success', @face-btn--success-color)
+    .faceButtonStyle(@face-btn--success-color)
 }
 .face-btn--dashed {
     border-style: dashed;
