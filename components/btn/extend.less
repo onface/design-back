@@ -1,0 +1,26 @@
+.faceButtonStyle(@color) {
+        background-color: @color;
+        background-image: -webkit-linear-gradient(top,@color, darken(@color, 3%));
+        border-color: darken(@color, 3%);
+        color:white;
+        &.face-btn--clicked:before {
+            border-color:lighten(@color, 3%);
+        }
+        &.face-btn--ghost{
+          border-color:@color;
+          color: @color;
+          &.face-btn--loading {
+              color: white;
+          }
+        }
+        &.face-btn--dashed {
+            border-color: @color;
+        }
+        &:focus {
+            box-shadow: 0 0 0 0.15em fade(@color, 45%);
+        }
+        &.face-btn--loading {
+            background: linear-gradient(90deg, @color 50%, darken(@color, 3%));
+            background-size: .6em;
+        }
+}
