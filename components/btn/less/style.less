@@ -5,15 +5,28 @@
     .faceButtonStyle(@face-btn--default-color);
     color:@face-btn--default-text-color;
     border:1px solid @face-btn--default-border-color;
-    &:focus {
-        box-shadow: 0 0 0 0.15em rgba(111,111,111,.1);
-    }
+    // &:focus {
+    //     box-shadow: 0 0 0 0.15em rgba(111,111,111,.1);
+    // }
     &.@{prefix}--dashed {
         border-color:@face-btn--default-border-color;
     }
     &.@{prefix}--ghost {
         color: @face-btn--default-text-color;
         border-color: @face-btn--default-border-color;
+    }
+}
+// link
+.@{prefix}--link {
+    background: none;
+    border-color: transparent;
+    color: @face-btn--primary-color;
+    &:hover {
+        box-shadow: none;
+        text-decoration: underline;
+    }
+    &:focus {
+        box-shadow: none;
     }
 }
 

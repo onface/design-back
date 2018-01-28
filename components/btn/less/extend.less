@@ -1,25 +1,26 @@
+@import "./settings.less";
 .faceButtonStyle(@color) {
         background-color: @color;
         background-image: -webkit-linear-gradient(top,@color, darken(@color, 3%));
         border-color: darken(@color, 3%);
         color:white;
-        &.face-btn--clicked:before {
-            border-color:lighten(@color, 3%);
-        }
-        &.face-btn--ghost{
+        &.@{prefix}--clicked:before {
+            border-color:darken(@color, 20%)
+        }x
+        &.@{prefix}--ghost{
           border-color:@color;
           color: @color;
           &.face-btn--loading {
               color: white;
           }
         }
-        &.face-btn--dashed {
+        &.@{prefix}--dashed {
             border-color: @color;
         }
-        &:focus {
-            box-shadow: 0 0 0 0.15em fade(@color, 45%);
-        }
-        &.face-btn--loading {
+        // &:focus {
+        //     box-shadow: 0 0 0 0.15em fade(@color, 45%);
+        // }
+        &.@{prefix}--loading {
             background: linear-gradient(90deg, @color 50%, darken(@color, 3%));
             background-size: .6em;
         }
