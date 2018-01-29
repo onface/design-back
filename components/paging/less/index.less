@@ -1,24 +1,39 @@
 @import "./settings.less";
 .@{prefix} {
+    text-align: center;
+    color: @face-paging-text-color;
+}
+@import "./ghost.less";
+@import "./solid.less";
+@import "./simple.less";
+@import "./group.less";
+.@{prefix}-dataTotal {
+    color:#666;
+    font-size: 0.8em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+.@{prefix}-goto {
+    font-size: 0.8em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.@{prefix}-mini-value,
+.@{prefix}-goto-value {
+    text-align: center;
+    display: inline-block;
+    border:1px solid #ccc;
+    border-radius: .3em;
+    width: 2.4em;
+    padding-left: .3em;
+    padding-right: .3em;
+    color: @face-paging-text-color;
+    &:focus {
+        outline: none;
+        border-color: @face-paging-primary-color;
+    }
+}
 
-}
-.@{prefix}--simple {
-    .@{prefix}-item,
-    .@{prefix}-prev,
-    .@{prefix}-next,
-    .@{prefix}-more,
-    {
-        display: inline-block;
-        color: @face-paging-text-color;
-        text-decoration: none;
-        &:hover {
-            color:@face-paging-primary-color;
-        }
-    }
-    .face-paging-item--current {
-        color: @face-paging-primary-color;
-    }
-}
 .@{prefix}-item,
 .@{prefix}-more,
 {
@@ -54,10 +69,10 @@
         }
     }
 }
-.face-paging-more--prev {
+.@{prefix}-more--prev {
 
 }
-.face-paging-more--next {
+.@{prefix}-more--next {
 
 }
 
@@ -71,6 +86,10 @@
 }
 .@{prefix}-item {
 
+}
+.@{prefix}-next--disabled,
+.@{prefix}-prev--disabled {
+    cursor: not-allowed;
 }
 .@{prefix}-next {
 

@@ -1,0 +1,49 @@
+@import "./settings.less";
+.@{prefix}--ghost {
+    .@{prefix}-item,
+    .@{prefix}-prev,
+    .@{prefix}-next,
+    .@{prefix}-more,
+    {
+        border:1px solid @face-paging-border-color;
+        border-radius: .3em;
+        line-height: 1.8em;
+        padding-left: .3em;
+        padding-right: .3em;
+        min-width: 1.2em;
+        display: inline-block;
+        color: @face-paging-text-color;
+        text-decoration: none;
+        &:hover {
+            color:@face-paging-primary-color;
+            border-color: @face-paging-primary-color;
+        }
+        margin-left: .2em;
+        margin-right: .2em;
+    }
+    .@{prefix}-item--current {
+        color: @face-paging-primary-color;
+        border-color: @face-paging-primary-color;
+    }
+    .@{prefix}-dataTotal {
+        font-size: 0.91em;
+    }
+    .@{prefix}-goto {
+        font-size: 0.91em;
+    }
+    .@{prefix}-goto-value {
+        border:1px solid @face-paging-border-color;
+        border-radius: .3em;
+        line-height: 1.8em;
+        padding-left: .3em;
+        padding-right: .3em;
+        min-width: 1.2em;
+    }
+    .@{prefix}-next--disabled,
+    .@{prefix}-prev--disabled {
+        &:hover {
+            border-color: @face-paging-border-color;
+            color: @face-paging-text-color;
+        }
+    }
+}
