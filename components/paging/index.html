@@ -4,64 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>btn</title>
+    <title>paging</title>
     <link rel="stylesheet" href="./index.less">
     <link rel="stylesheet" href="/face.less" />
     <link rel="stylesheet" href="/components/icons/index.less" />
     <link rel="stylesheet" href="/components/btn/index.less" />
 </head>
 <body style="padding:20px;text-align:center;" >
-    <div class="face-btn-group">
-        <span class="face-btn face-btn--ghost">
-            <span class="face-btn-icon fi fi-angle-left"></span>
-        </span><span class="face-btn face-btn--ghost">
-            1
-        </span><span class="face-btn face-btn--ghost">
-            2
-        </span><span class="face-btn face-btn--ghost">
-            3
-        </span><span class="face-btn face-btn--ghost face-paging-skip">
-
-        </span><span class="face-btn face-btn--primary face-paging--on face-paging--on-solid">
-            4
-        </span><span class="face-btn  face-btn--ghost face-paging-skip">
-
-        </span><span class="face-btn  face-btn--ghost">
-            5
-        </span><span class="face-btn  face-btn--ghost">
-            6
-        </span><span class="face-btn face-btn--ghost">
-            7
-        </span><span class="face-btn face-btn--ghost">
-            <span class="face-btn-icon fi fi-angle-right"></span>
-        </span>
+    <div class="face-paging face-paging--simple">
+        <a class="face-paging-prev" href="#" >
+            <span class="face-paging-prev-icon fi fi-angle-left"></span>
+        </a>
+        <a href="#" class="face-paging-more face-paging-more--prev">
+            <span class="face-paging-more-text">
+                ...
+            </span>
+            <span class="face-paging-more-icon">
+                <span class="fi fi-angle-double-left"></span>
+            </span>
+        </a>
+        <a href="#" class="face-paging-item">6</a>
+        <a href="#" class="face-paging-item">7</a>
+        <a href="#" class="face-paging-item">8</a>
+        <a href="#" class="face-paging-item face-paging-item--current">9</a>
+        <a href="#" class="face-paging-item">10</a>
+        <a href="#" class="face-paging-item">11</a>
+        <a href="#" class="face-paging-item">12</a>
+        <a href="#" class="face-paging-more face-paging-more--next">
+            <span class="face-paging-more-text">
+                ...
+            </span>
+            <span class="face-paging-more-icon">
+                <span class="fi fi-angle-double-right"></span>
+            </span>
+        </a>
+        <a class="face-paging-next" href="#" >
+            <span class="face-paging-next-icon fi fi-angle-right"></span>
+        </a>
     </div>
-    <br /><br />
-    <div class="face-btn-group">
-        <span class="face-btn">
-            <span class="face-btn-icon fi fi-angle-left"></span>
-        </span><span class="face-btn">
-            1
-        </span><span class="face-btn">
-            2
-        </span><span class="face-btn">
-            3
-        </span><span class="face-btn face-paging-skip">
-
-        </span><span class="face-btn face-btn--primary face-paging--on face-paging--on-solid">
-            4
-        </span><span class="face-btn face-paging-skip">
-
-        </span><span class="face-btn">
-            5
-        </span><span class="face-btn">
-            6
-        </span><span class="face-btn">
-            7
-        </span><span class="face-btn">
-            <span class="face-btn-icon fi fi-angle-right"></span>
-        </span>
+    <div class="face-paging face-paging--simple">
+        <a class="face-paging-prev face-paging-prev--disabled" href="#" >
+            <span class="face-paging-prev-icon fi fi-angle-left"></span>
+        </a>
+        <a href="#" class="face-paging-item">1</a>
+        <a href="#" class="face-paging-item">2</a>
+        <a href="#" class="face-paging-item">3</a>
+        <a href="#" class="face-paging-item face-paging-item--current">4</a>
+        <a href="#" class="face-paging-item">5</a>
+        <a href="#" class="face-paging-item">6</a>
+        <a href="#" class="face-paging-item">7</a>
+        <a class="face-paging-next face-paging-next--disabled" href="#" >
+            <span class="face-paging-next-icon fi fi-angle-right"></span>
+        </a>
     </div>
-
 </body>
 </html>

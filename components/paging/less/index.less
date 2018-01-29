@@ -1,0 +1,80 @@
+@import "./settings.less";
+.@{prefix} {
+
+}
+.@{prefix}--simple {
+    .@{prefix}-item,
+    .@{prefix}-prev,
+    .@{prefix}-next,
+    .@{prefix}-more,
+    {
+        display: inline-block;
+        color: @face-paging-text-color;
+        text-decoration: none;
+        &:hover {
+            color:@face-paging-primary-color;
+        }
+    }
+    .face-paging-item--current {
+        color: @face-paging-primary-color;
+    }
+}
+.@{prefix}-item,
+.@{prefix}-more,
+{
+    min-width: 2em;
+}
+.@{prefix}-prev,
+.@{prefix}-next,
+{
+    min-width: 1em;
+}
+.@{prefix} .@{prefix}-prev--disabled,
+.@{prefix} .@{prefix}-next--disabled {
+    &,
+    &:hover {
+        color: @face-paging-disabled-text-color;
+    }
+    cursor: not-allowed;
+}
+.@{prefix}-prev {
+
+}
+.@{prefix}-prev-icon {
+
+}
+.@{prefix}-more {
+    min-width: 1em;
+    &:hover {
+        .@{prefix}-more-icon {
+            display: block;
+        }
+        .@{prefix}-more-text {
+            display: none;
+        }
+    }
+}
+.face-paging-more--prev {
+
+}
+.face-paging-more--next {
+
+}
+
+.@{prefix}-more-text {
+    vertical-align: top;
+    position: relative;
+    top:-.25em;
+}
+.@{prefix}-more-icon {
+    display: none;
+}
+.@{prefix}-item {
+
+}
+.@{prefix}-next {
+
+}
+.@{prefix}-next-icon {
+
+}
