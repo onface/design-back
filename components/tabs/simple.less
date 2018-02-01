@@ -1,0 +1,29 @@
+@import "./settings";
+.@{face-tabs-prefix}--simple {
+     &>.@{face-tabs-prefix}-bar {
+         color: @face-tabs-text-color;
+         border-bottom: @face-tabs-bar-bottom-border-width solid @face-tabs-bar-bottom-border-color;
+         line-height: @face-tabs-bar-nav-tab-lineHeight;
+         .@{face-tabs-prefix}-bar-nav-tab {
+             display: inline-block;
+             padding-left: 1em;
+             padding-right: 1em;
+             // margin-left: .5em;
+             // margin-right: .5em;
+             line-height: @face-tabs-bar-nav-tab-lineHeight;
+             margin-bottom: -@face-tabs-bar-bottom-border-width;
+             &:first-child {
+                 margin-left: 0;
+             }
+         }
+         .@{face-tabs-prefix}-bar-nav-tab:hover,
+         .@{face-tabs-prefix}-bar-nav-tab--on {
+             color:@face-tabs-primary-color;
+             border-bottom: @face-tabs-bar-bottom-border-width solid @face-tabs-primary-color;
+         }
+     }
+     &>.@{face-tabs-prefix}-content {
+         padding-top: 1em;
+         padding-bottom: 1em;
+     }
+}

@@ -1,23 +1,23 @@
 @import "./settings.less";
 @import "./extend.less";
 
-.@{prefix} {
+.@{face-btn-prefix} {
     .faceButtonStyle(@face-btn--default-color);
     color:@face-btn--default-text-color;
     border:1px solid @face-btn--default-border-color;
     // &:focus {
     //     box-shadow: 0 0 0 0.15em rgba(111,111,111,.1);
     // }
-    &.@{prefix}--dashed {
+    &.@{face-btn-prefix}--dashed {
         border-color:@face-btn--default-border-color;
     }
-    &.@{prefix}--ghost {
+    &.@{face-btn-prefix}--ghost {
         color: @face-btn--default-text-color;
         border-color: @face-btn--default-border-color;
     }
 }
 // link
-.@{prefix}--link {
+.@{face-btn-prefix}--link {
     background: none;
     border-color: transparent;
     color: @face-btn--primary-color;
@@ -34,47 +34,47 @@
 }
 
 // primary
-.@{prefix}--primary {
+.@{face-btn-prefix}--primary {
     .faceButtonStyle(@face-btn--primary-color)
 }
-html .@{prefix}-group .@{prefix}--ghost.@{prefix}--primary {
+html .@{face-btn-prefix}-group .@{face-btn-prefix}--ghost.@{face-btn-prefix}--primary {
     border-left-color: @face-btn--primary-color;
 }
 // danger
-.@{prefix}--danger {
+.@{face-btn-prefix}--danger {
     .faceButtonStyle(@face-btn--danger-color)
 }
-html .@{prefix}-group .@{prefix}--ghost.@{prefix}--danger {
+html .@{face-btn-prefix}-group .@{face-btn-prefix}--ghost.@{face-btn-prefix}--danger {
     border-left-color: @face-btn--danger-color;
 }
 // warning
-.@{prefix}--warning {
+.@{face-btn-prefix}--warning {
     .faceButtonStyle(@face-btn--warning-color)
 }
-html .@{prefix}-group .@{prefix}--ghost.@{prefix}--warning {
+html .@{face-btn-prefix}-group .@{face-btn-prefix}--ghost.@{face-btn-prefix}--warning {
     border-left-color: @face-btn--warning-color;
 }
 // info
-.@{prefix}--info {
+.@{face-btn-prefix}--info {
     .faceButtonStyle(@face-btn--info-color)
 }
-html .@{prefix}-group .@{prefix}--ghost.@{prefix}--info {
+html .@{face-btn-prefix}-group .@{face-btn-prefix}--ghost.@{face-btn-prefix}--info {
     border-left-color: @face-btn--info-color;
 }
 // success
-.@{prefix}--success {
+.@{face-btn-prefix}--success {
     .faceButtonStyle(@face-btn--success-color)
 }
-html .@{prefix}-group .@{prefix}--ghost.@{prefix}--success {
+html .@{face-btn-prefix}-group .@{face-btn-prefix}--ghost.@{face-btn-prefix}--success {
     border-left-color: @face-btn--success-color;
 }
 
 // dark
 /*
-html .@{prefix}-group .@{prefix}--ghost.@{prefix}--dark {
+html .@{face-btn-prefix}-group .@{face-btn-prefix}--ghost.@{face-btn-prefix}--dark {
     border-left-color: @face-btn--dark-color;
 }
-.@{prefix}--dark {
+.@{face-btn-prefix}--dark {
     .faceButtonStyle(@face-btn--dark-color)
 }
 */

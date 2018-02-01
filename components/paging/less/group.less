@@ -1,9 +1,9 @@
 @import "./settings.less";
-.@{prefix}--group  {
-    .@{prefix}-item,
-    .@{prefix}-prev,
-    .@{prefix}-next,
-    .@{prefix}-more,
+.@{face-paging-prefix}--group  {
+    .@{face-paging-prefix}-item,
+    .@{face-paging-prefix}-prev,
+    .@{face-paging-prefix}-next,
+    .@{face-paging-prefix}-more,
     {
         position: relative;
         border:1px solid @face-paging-border-color;
@@ -21,26 +21,26 @@
             border-color: @face-paging-primary-color;
         }
     }
-    .@{prefix}-prev {
+    .@{face-paging-prefix}-prev {
         border-top-left-radius: .3em;
         border-bottom-left-radius: .3em;
     }
-    .@{prefix}-next {
+    .@{face-paging-prefix}-next {
         border-top-right-radius: .3em;
         border-bottom-right-radius: .3em;
     }
-    .@{prefix}-item--current {
+    .@{face-paging-prefix}-item--current {
         z-index: 2;
         color: @face-paging-primary-color;
         border-color: @face-paging-primary-color;
     }
-    .@{prefix}-dataTotal {
+    .@{face-paging-prefix}-dataTotal {
         font-size: 0.91em;
     }
-    .@{prefix}-goto {
+    .@{face-paging-prefix}-goto {
         font-size: 0.91em;
     }
-    .@{prefix}-goto-value {
+    .@{face-paging-prefix}-goto-value {
         border:1px solid @face-paging-border-color;
         border-radius: .3em;
         line-height: 1.8em;
@@ -48,8 +48,8 @@
         padding-right: .3em;
         min-width: 1.2em;
     }
-    .@{prefix}-next--disabled,
-    .@{prefix}-prev--disabled {
+    .@{face-paging-prefix}-next--disabled,
+    .@{face-paging-prefix}-prev--disabled {
         &:hover {
             border-color: @face-paging-border-color;
             color: @face-paging-text-color;
@@ -57,15 +57,15 @@
     }
 }
 
-.@{prefix}--group-solid {
-    .@{prefix}-item,
-    .@{prefix}-prev,
-    .@{prefix}-next,
-    .@{prefix}-more,
+.@{face-paging-prefix}--group-solid {
+    .@{face-paging-prefix}-item,
+    .@{face-paging-prefix}-prev,
+    .@{face-paging-prefix}-next,
+    .@{face-paging-prefix}-more,
     {
         background-color: @face-paging-background-color;
     }
-    .@{prefix}-item--current {
+    .@{face-paging-prefix}-item--current {
         background-color: @face-paging-primary-color;
         color:white;
     }

@@ -8,30 +8,30 @@
             background-color: lighten(@color, 2%);
             background-image: -webkit-linear-gradient(top,lighten(@color, 4%), lighten(@color, 2%));
         }
-        &.@{prefix}--clicked:before {
+        &.@{face-btn-prefix}--clicked:before {
             border-color:darken(@color, 20%)
         }
-        &.@{prefix}--ghost{
+        &.@{face-btn-prefix}--ghost{
           border-color:@color;
           color: @color;
-          &.@{prefix}--loading {
+          &.@{face-btn-prefix}--loading {
               color: white;
           }
-          &.@{prefix}--loading:hover {
+          &.@{face-btn-prefix}--loading:hover {
               background-image: linear-gradient(90deg, lighten(@color, 4%) 50%, darken(@color, 2%) 50%);
           }
         }
-        &.@{prefix}--dashed {
+        &.@{face-btn-prefix}--dashed {
             border-color: @color;
         }
         // &:focus {
         //     box-shadow: 0 0 0 0.15em fade(@color, 45%);
         // }
-        &.@{prefix}--loading {
+        &.@{face-btn-prefix}--loading {
             background-image: linear-gradient(90deg, lighten(@color, 2%) 50%, darken(@color, 3%) 50%);
             background-size: .6em;
         }
-        &.@{prefix}--loading:hover {
+        &.@{face-btn-prefix}--loading:hover {
             background-image: linear-gradient(90deg, lighten(@color, 4%) 50%, darken(@color, 2%) 50%);
         }
 }

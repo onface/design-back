@@ -1,9 +1,9 @@
 @import "./settings.less";
-.@{prefix}--solid {
-    .@{prefix}-item,
-    .@{prefix}-prev,
-    .@{prefix}-next,
-    .@{prefix}-more,
+.@{face-paging-prefix}--solid {
+    .@{face-paging-prefix}-item,
+    .@{face-paging-prefix}-prev,
+    .@{face-paging-prefix}-next,
+    .@{face-paging-prefix}-more,
     {
         border:1px solid transparent;
         border-radius: .3em;
@@ -23,17 +23,17 @@
         margin-left: .2em;
         margin-right: .2em;
     }
-    .@{prefix}-item--current {
+    .@{face-paging-prefix}-item--current {
         background-color: @face-paging-primary-color;
         color:white;
     }
-    .@{prefix}-dataTotal {
+    .@{face-paging-prefix}-dataTotal {
         font-size: 0.91em;
     }
-    .@{prefix}-goto {
+    .@{face-paging-prefix}-goto {
         font-size: 0.91em;
     }
-    .@{prefix}-goto-value {
+    .@{face-paging-prefix}-goto-value {
         border:1px solid @face-paging-border-color;
         border-radius: .3em;
         line-height: 1.8em;
@@ -41,8 +41,8 @@
         padding-right: .3em;
         min-width: 1.2em;
     }
-    .@{prefix}-next--disabled,
-    .@{prefix}-prev--disabled {
+    .@{face-paging-prefix}-next--disabled,
+    .@{face-paging-prefix}-prev--disabled {
         &:hover {
             background-color: #f7f7f7;
             color: @face-paging-text-color;

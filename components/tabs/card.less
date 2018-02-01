@@ -1,0 +1,35 @@
+@import "./settings";
+.@{face-tabs-prefix}--card {
+     &>.@{face-tabs-prefix}-bar {
+         color: @face-tabs-text-color;
+         border-bottom: @face-tabs--card-bar-bottom-border-width solid @face-tabs--card-bar-bottom-border-color;
+         line-height: @face-tabs-bar-nav-tab-lineHeight;
+         .@{face-tabs-prefix}-bar-nav-tab {
+             display: inline-block;
+             padding-left: 1em;
+             padding-right: 1em;
+             line-height: @face-tabs-bar-nav-tab-lineHeight;
+             border: @face-tabs--card-bar-bottom-border-width solid @face-tabs--card-bar-bottom-border-color;
+             border-bottom: none;
+             border-left-width:0px;
+             background-color: @face-tabs--card-bar-nav-tab-background-color;
+             &:first-child {
+                 margin-left: 0;
+                 border-left-width:1px;
+                 border-top-left-radius: .3em;
+             }
+             &:last-child {
+                 border-top-right-radius: .3em;
+             }
+         }
+         .@{face-tabs-prefix}-bar-nav-tab:hover,
+         .@{face-tabs-prefix}-bar-nav-tab--on {
+            background-color: @face-tabs--card-bar-nav-tab--on-background-color;
+            color:@face-tabs-primary-color;
+         }
+     }
+     &>.@{face-tabs-prefix}-content {
+         padding-top: 1em;
+         padding-bottom: 1em;
+     }
+}
