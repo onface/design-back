@@ -1,5 +1,5 @@
 @import "./settings";
-.@{face-tabs-prefix}--box{
+.@{face-tabs-prefix}--themes-box{
      border:1px solid @face-tabs--box-border;
      &>.@{face-tabs-prefix}-bar {
          color: @face-tabs--box-text-color;
@@ -15,7 +15,11 @@
              border-left: @face-tabs--box-bar-border-width solid transparent;
              margin-left: -1px;
              &:first-child {
+                 border-left-width: 0;
                  margin-left: 0;
+             }
+             &:first-child:hover {
+                 border-left-width: 0;
              }
          }
          .@{face-tabs-prefix}-bar-nav-tab:hover,
