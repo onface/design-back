@@ -1,0 +1,171 @@
+@import "./settings";
+.@{face-upload-prefix}-photo {
+    position: relative;
+    border:1px dashed #d9d9d9;
+    transition: border .3s;
+    background-color: #fafafa;
+    width: 8em;
+    height: 8em;
+    border-radius: .3em;
+    cursor: pointer;
+    text-align: center;
+    box-sizing: border-box;
+    &:hover {
+        border-color: @face-upload-primary-color;
+        .@{face-upload-prefix}-photo-value-tool {
+            display: block;
+        }
+    }
+}
+.@{face-upload-prefix}-photo-tip {
+    color:#666;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+}
+.@{face-upload-prefix}-photo-tip-icon {
+    font-size: 2em;
+}
+.@{face-upload-prefix}-photo-tip-text {
+    font-size: 1em;
+}
+
+.@{face-upload-prefix}-photo-value {
+    display: inline-block;
+    position: relative;
+    text-align:center;
+    margin-top: 5%;
+    width: 90%;
+    height: 90%;
+    position: relative;
+}
+.@{face-upload-prefix}-photo-value-photo {
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.@{face-upload-prefix}-photo-value-tool {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: rgba(1,1,1,.2);
+    text-align: center;
+    width: 100%;
+    height:100%;
+    color:white;
+}
+.@{face-upload-prefix}-photo-value-tool-control {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.@{face-upload-prefix}-photo-value-tool-control-upload,
+.@{face-upload-prefix}-photo-value-tool-control-preview,
+.@{face-upload-prefix}-photo-value-tool-control-remove {
+    transition: opacity .3s;
+    opacity: .8;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.@{face-upload-prefix}-photo-value-tool-control-upload {
+
+}
+.@{face-upload-prefix}-photo-value-tool-control-preview {
+
+}
+.@{face-upload-prefix}-photo-value-tool-control-remove {
+
+}
+.@{face-upload-prefix}-list--photo:after {
+    content: ' ';
+    display: block;
+    clear: both;
+}
+.@{face-upload-prefix}-list--photo > .@{face-upload-prefix}-photo {
+    float: left;
+    margin-right: .5em;
+    margin-bottom: .5em;
+}
+
+.@{face-upload-prefix}-list--file > .@{face-upload-prefix}-photo {
+        float: none;
+        margin-top: .5em;
+        margin-bottom: .5em;
+}
+.@{face-upload-prefix}-list-button {
+    width: 100%;
+    margin-bottom: .5em;
+}
+
+
+.@{face-upload-prefix}-list-file {
+    display: block;
+    color:#91939B;
+    line-height: 1.7;
+    padding-left: .4em;
+    // padding-right: .4em;
+    margin-bottom: .5em;
+    margin-top: .5em;
+    border-radius: .3em;
+    &:hover {
+        background-color: #f5f7fa;
+        .@{face-upload-prefix}-list-control-success {
+            display: none;
+        }
+        .@{face-upload-prefix}-list-control-remove {
+            display: block;
+        }
+    }
+}
+.@{face-upload-prefix}-list-file-icon {
+
+}
+.@{face-upload-prefix}-list-file-icon-loading {
+    width: 1em;
+    height: 1em;
+    vertical-align: middle;
+}
+.@{face-upload-prefix}-list-name {}
+
+.@{face-upload-prefix}-list-control {
+    float: right;
+}
+.@{face-upload-prefix}-list-control-remove,
+.@{face-upload-prefix}-list-control-success {
+    padding-left: .5em;
+    padding-right: .5em;
+}
+.@{face-upload-prefix}-list-control-remove {
+    display: none;
+    cursor: pointer;
+    color: @face-upload-danger-color;
+}
+.@{face-upload-prefix}-list-control-success {
+    display: none;
+    color:@face-upload-success-color;
+}
+.@{face-upload-prefix}-list-file--success {
+    .@{face-upload-prefix}-list-control-success {
+        display: block;
+    }
+}
+.@{face-upload-prefix}-list-file--fail {
+    color: @face-upload-danger-color;
+    .@{face-upload-prefix}-list-control-success {
+        display: none;
+    }
+    .@{face-upload-prefix}-list-control-remove {
+        display: block;
+    }
+}

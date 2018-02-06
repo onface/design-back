@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>upload</title>
+    <link rel="stylesheet" href="./index.less">
+    <link rel="stylesheet" href="/face.less" />
+    <link rel="stylesheet" href="/components/icons/index.less" />
+    <link rel="stylesheet" href="/components/btn/index.less" />
+</head>
+<body style="padding:20px;" >
+    <h2>
+        photo
+    </h2>
+    <div class="face-upload-photo">
+        <div class="face-upload-photo-tip">
+            <div class="face-upload-photo-tip-icon">
+                <span class="fi fi-upload"></span>
+            </div>
+            <div class="face-upload-photo-tip-text">
+                上传
+            </div>
+        </div>
+    </div>
+    <h2>photo value</h2>
+    <div class="face-upload-photo">
+        <div class="face-upload-photo-value">
+            <div class="face-upload-photo-value-tool">
+                <div class="face-upload-photo-value-tool-control">
+                    <span class="face-upload-photo-value-tool-control-upload">
+                        <span class="fi fi-upload"></span>
+                    </span>
+                    <span class="face-upload-photo-value-tool-control-preview">
+                        <span class="fi fi-eye"></span>
+                    </span>
+                    <span class="face-upload-photo-value-tool-control-remove">
+                        <span class="fi fi-trash"></span>
+                    </span>
+                </div>
+            </div>
+            <img src="https://picsum.photos/230" alt="" class="face-upload-photo-value-photo" />
+        </div>
+    </div>
+    <h2>custom size </h2>
+    <div
+        class="face-upload-photo"
+        style="width:100px;height:100px;font-size:14px;"
+    >
+        <div class="face-upload-photo-value">
+            <div class="face-upload-photo-value-tool">
+                <div class="face-upload-photo-value-tool-control">
+                    <span class="face-upload-photo-value-tool-control-upload">
+                        <span class="fi fi-upload"></span>
+                    </span>
+                    <span class="face-upload-photo-value-tool-control-preview">
+                        <span class="fi fi-eye"></span>
+                    </span>
+                    <span class="face-upload-photo-value-tool-control-remove">
+                        <span class="fi fi-trash"></span>
+                    </span>
+                </div>
+            </div>
+            <img src="https://picsum.photos/230" alt="" class="face-upload-photo-value-photo" />
+        </div>
+    </div>
+    <h2>list</h2>
+    <div class="face-upload-list face-upload-list--photo">
+        <div class="face-upload-photo">
+            <div class="face-upload-photo-value">
+                <div class="face-upload-photo-value-tool">
+                    <div class="face-upload-photo-value-tool-control">
+                        <span class="face-upload-photo-value-tool-control-upload">
+                            <span class="fi fi-upload"></span>
+                        </span>
+                        <span class="face-upload-photo-value-tool-control-preview">
+                            <span class="fi fi-eye"></span>
+                        </span>
+                        <span class="face-upload-photo-value-tool-control-remove">
+                            <span class="fi fi-trash"></span>
+                        </span>
+                    </div>
+                </div>
+                <img src="https://picsum.photos/230" alt="" class="face-upload-photo-value-photo" />
+            </div>
+        </div>
+        <div class="face-upload-photo">
+            <div class="face-upload-photo-tip">
+                <div class="face-upload-photo-tip-icon">
+                    <span class="fi fi-upload"></span>
+                </div>
+                <div class="face-upload-photo-tip-text">
+                    上传
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>file list</h2>
+    <div style="width:300px;" >
+        <div class="face-upload-list face-upload-list--file">
+            <span class="face-btn face-btn--primary face-btn--full face-btn--large"  >
+                <span class="fi fi-upload"></span>
+                上传
+            </span>
+            <div class="face-upload-list-file">
+                <span class="face-upload-list-file-icon">
+                    <span class="fi fi-file-text-o"></span>
+                </span>
+                <span class="face-upload-list-name">
+                    some.txt
+                </span>
+                <span class="face-upload-list-control">
+                    <span class="face-upload-list-control-remove">
+                        <span class="fi fi-close"></span>
+                    </span>
+                    <span class="face-upload-list-control-success">
+                        <span class="fi fi-check-circle"></span>
+                    </span>
+                </span>
+            </div>
+            <div class="face-upload-list-file">
+                <span class="face-upload-list-file-icon">
+                    <img
+                        class="face-upload-list-file-icon-loading"
+                        src="./loading.svg"
+                    />
+                </span>
+                <span class="face-upload-list-name">
+                    some.txt
+                </span>
+                <span class="face-upload-list-control">
+                    <span class="face-upload-list-control-remove">
+                        <span class="fi fi-close"></span>
+                    </span>
+                    <span class="face-upload-list-control-success">
+                        <span class="fi fi-check-circle"></span>
+                    </span>
+                </span>
+            </div>
+            <div class="face-upload-list-file face-upload-list-file--success">
+                <span class="face-upload-list-file-icon">
+                    <span class="fi fi-file-text-o"></span>
+                </span>
+                <span class="face-upload-list-name">
+                    some.txt
+                </span>
+                <span class="face-upload-list-control">
+                    <span class="face-upload-list-control-remove">
+                        <span class="fi fi-close"></span>
+                    </span>
+                    <span class="face-upload-list-control-success">
+                        <span class="fi fi-check-circle"></span>
+                    </span>
+                </span>
+            </div>
+            <div class="face-upload-list-file face-upload-list-file--fail">
+                <span class="face-upload-list-file-icon">
+                    <span class="fi fi-file-text-o"></span>
+                </span>
+                <span class="face-upload-list-name">
+                    some.txt
+                </span>
+                <span class="face-upload-list-control">
+                    <span class="face-upload-list-control-remove">
+                        <span class="fi fi-close"></span>
+                    </span>
+                    <span class="face-upload-list-control-success">
+                        <span class="fi fi-check-circle"></span>
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
