@@ -7,8 +7,6 @@
 .@{face-progress-prefix}-line {
     position: relative;
     line-height: 1em;
-    padding-bottom: 0.3125em;
-    padding-top: 0.3125em;
     display: table;
     width: 100%;
     & + & {
@@ -20,6 +18,8 @@
     vertical-align: middle;
     position: relative;
     display: table-cell;
+    padding-bottom: 0.3125em;
+    padding-top: 0.3125em;
 }
 .@{face-progress-prefix}-line-box-track {
     position: relative;
@@ -36,6 +36,12 @@
     border-radius: inherit; 
     background-color: @face-progress-primary-color;
     text-align: right;
+    &:nth-child(2) {
+        background-color: @face-progress-success-color;
+    }
+    &:nth-child(3) {
+        background-color: @face-progress-danger-color;
+    }
 }
 .@{face-progress-prefix}-line-box-track-bar-text {
     color:#fff;
@@ -76,6 +82,10 @@
     .@{face-progress-prefix}-line--thick {
         padding-bottom: 0;
         padding-top: 0;
+        .@{face-progress-prefix}-line-box {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
         .@{face-progress-prefix}-line-box-track {
             height: 1em;
             border-radius: 0.5em;
@@ -137,7 +147,8 @@
     stroke: @face-progress-primary-color;
     stroke-width: 6 ;
     fill-opacity: 0 ;
-    stroke-dashoffset: 0px;
+    stroke-dasharray: 295.31px, 295.31px;
+    // stroke-dashoffset: 0px;
     transition: stroke-dashoffset 0.3s ease 0s,
                 stroke-dasharray 0.3s ease 0s,
                 stroke 0.3s, 
@@ -175,5 +186,9 @@
     .@{face-progress-prefix}-circle--dashboard {
         .@{face-progress-prefix}-circle-svg {
             transform:rotate(225deg);
+        }
+        .@{face-progress-prefix}-circle-svg-outer ,
+        .@{face-progress-prefix}-circle-svg-inner {
+            stroke-dasharray: 221.5px, 221.5px;
         }
     }
