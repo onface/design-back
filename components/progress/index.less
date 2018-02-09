@@ -36,10 +36,10 @@
     border-radius: inherit; 
     background-color: @face-progress-primary-color;
     text-align: right;
-    &:nth-child(2) {
+    &:nth-child(3n + 2) {
         background-color: @face-progress-success-color;
     }
-    &:nth-child(3) {
+    &:nth-child(3n + 3) {
         background-color: @face-progress-danger-color;
     }
 }
@@ -66,6 +66,12 @@
     .@{face-progress-prefix}-line--theme-danger {
         .@{face-progress-prefix}-line-box-track-bar {
             background-color: @face-progress-danger-color;
+            &:nth-child(3n + 2) {
+                background-color: @face-progress-success-color;
+            }
+            &:nth-child(3n + 3) {
+                background-color: @face-progress-primary-color;
+            }
         }
         .@{face-progress-prefix}-line-info {
             color: @face-progress-danger-color;
@@ -74,6 +80,12 @@
     .@{face-progress-prefix}-line--theme-success {
         .@{face-progress-prefix}-line-box-track-bar {
             background-color: @face-progress-success-color;
+            &:nth-child(3n + 2) {
+                background-color: @face-progress-danger-color;
+            }
+            &:nth-child(3n + 3) {
+                background-color: @face-progress-primary-color;
+            }
         }
         .@{face-progress-prefix}-line-info {
             color: @face-progress-success-color;
@@ -138,9 +150,7 @@
     fill-opacity: 0 ;
     stroke-dasharray: 295.31px, 295.31px;
     stroke-dashoffset: 0px;
-    transition: stroke-dashoffset 0.3s ease 0s,
-                stroke-dasharray 0.3s ease 0s, 
-                stroke 0.3s;
+    transition: all .3s ease-in-out;
 }
 .@{face-progress-prefix}-circle-svg-inner {
     stroke-linecap: round ;
@@ -148,11 +158,8 @@
     stroke-width: 6 ;
     fill-opacity: 0 ;
     stroke-dasharray: 295.31px, 295.31px;
-    // stroke-dashoffset: 0px;
-    transition: stroke-dashoffset 0.3s ease 0s,
-                stroke-dasharray 0.3s ease 0s,
-                stroke 0.3s, 
-                stroke-width 0.06s ease 0.3s;
+    stroke-dashoffset: 295.31px;
+    transition: all .3s ease-in-out;
 }
 .@{face-progress-prefix}-circle-info {
     color: @face-progress-default-hd-color;
@@ -187,8 +194,11 @@
         .@{face-progress-prefix}-circle-svg {
             transform:rotate(225deg);
         }
+        .@{face-progress-prefix}-circle-svg-inner {
+            stroke-dashoffset: 221.5px;
+        }
         .@{face-progress-prefix}-circle-svg-outer ,
         .@{face-progress-prefix}-circle-svg-inner {
-            stroke-dasharray: 221.5px, 221.5px;
+            stroke-dasharray: 221.5px, 295.31px;
         }
     }
