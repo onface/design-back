@@ -1,0 +1,88 @@
+.face-tree-it-checkbox {
+    vertical-align: middle;
+    display: inline-block;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+
+    border:1px solid #BCBCBC;
+    border-radius: .3em;
+    background-color:white;
+    box-shadow: inset 0px 1px 1px #DEDEDE;
+
+    width:16px;
+    height:16px;
+    margin-right: 3px;
+    margin-right: 3px;
+}
+.face-tree-it-checkbox-inner {
+    width:100%;
+    height: 100%;
+    text-align: center;
+    font-size:12px;
+    position: absolute;
+    left:0;top:0;
+    display:none;
+    &:before {
+        width: 8px;
+        height: 4px;
+        position: absolute;
+        top:2.8px;
+        left:2px;
+    }
+}
+
+    .face-tree-it-checkbox--checked {
+        background-color:#3b99fc;
+        border-color: #3b99fc;
+
+        box-shadow: none;
+        .face-tree-it-checkbox-inner {
+            display: inline-block;
+            // color:white;
+            &:before {
+                text-align: center;
+                content: ' ';
+                display: inline-block;
+                border: 2px solid white;
+                border-top-width: 0;
+                border-right-width: 0;
+                -moz-transform:    rotate(-50deg);
+                -o-transform:      rotate(-50deg);
+                -webkit-transform: rotate(-50deg);
+                transform:         rotate(-50deg);
+            }
+        }
+    }
+    .face-tree-it-checkbox--haschecked {
+        background-color:#3b99fc;
+        border-color: #3b99fc;
+
+        box-shadow: none;
+        .face-tree-it-checkbox-inner {
+            display: inline-block;
+            // color:white;
+            right: 0;
+            bottom: 0;
+            &:before {
+                display:block;
+                text-align: center;
+                content: ' ';
+                height: 2px;
+                width: 70%;
+                background-color: #fff;
+            }
+        }
+
+    }
+
+    html .face-tree-it-checkbox--disable,
+    html .face-tree-it-checkbox--disable.face-tree-it-checkbox--checked {
+        border-color:#CCC;
+        background-color:#EEE;
+        .face-tree-it-checkbox-inner {
+            &:before {
+                border-color:#AAA;
+            }
+        }
+    }
