@@ -118,3 +118,29 @@ html .face-one-code-source-tool-copy {
         overflow: auto;
     }
 }
+@media screen and (max-width: 750px) {
+    .face-one-code-info-switchCode {
+        font-size: 1.2em;
+    }
+    .face-one-code--horiz {
+        .face-one-code-info-switchCode {
+            width: 100%;
+            position: static;
+        }
+        .face-one-code-F-view {
+            float: none;
+            width: 100%;
+        }
+        .face-one-code-source {
+            display: none;
+            width: 100%;
+            position: static;
+        }
+    }
+    html .face-one-code--horiz.face-one-code--open {
+        .face-one-code-source {
+            display: block;
+        }
+    }
+
+}
