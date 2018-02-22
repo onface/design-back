@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>progress</title>
-    <link rel="stylesheet" href="./index.less">
+    <link rel="stylesheet" href="./less/index.less">
     <link rel="stylesheet" href="/face.less" />
     <link rel="stylesheet" href="/components/icons/index.less" />
     <link rel="stylesheet" href="/components/btn/index.less" />
@@ -29,7 +29,7 @@
 			</div>
 			<div class="face-progress-line-info">60.00%</div>
 		</div>
-		<div class="face-progress-line face-progress-line--theme-danger">
+		<div class="face-progress-line face-progress-line--error">
 			<div class="face-progress-line-box">
 				<div class="face-progress-line-box-track">
 					<div class="face-progress-line-box-track-bar" style="width:40%"></div>
@@ -39,7 +39,7 @@
 				<span class="fi fi-close-of"></span> 失败
 			</div>
 		</div>
-		<div class="face-progress-line face-progress-line--theme-success">
+		<div class="face-progress-line face-progress-line--success">
 			<div class="face-progress-line-box">
 				<div class="face-progress-line-box-track">
 					<div class="face-progress-line-box-track-bar" style="width:80%"></div>
@@ -98,7 +98,7 @@
 			</div>
 			<div class="face-progress-line-info">60.00%</div>
 		</div>
-		<div class="face-progress-line face-progress-line--thick  face-progress-line--theme-success">
+		<div class="face-progress-line face-progress-line--thick  face-progress-line--success">
 			<div class="face-progress-line-box">
 				<div class="face-progress-line-box-track">
 					<div class="face-progress-line-box-track-bar" style="width:60%">
@@ -110,7 +110,7 @@
 				<span class="fi fi-check-of"></span>
 			</div>
 		</div>
-		<div class="face-progress-line face-progress-line--thick  face-progress-line--theme-danger">
+		<div class="face-progress-line face-progress-line--thick  face-progress-line--error">
 			<div class="face-progress-line-box">
 				<div class="face-progress-line-box-track">
 					<div class="face-progress-line-box-track-bar" style="width:60%">
@@ -140,24 +140,51 @@
 	<div style="width:100px;font-size: 16px;">
 		<div class="face-progress-circle">
 			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
-				<path class="face-progress-circle-svg-outer" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" ></path>
-			    <path class="face-progress-circle-svg-inner" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke-dashoffset="295.31px"></path>
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+					    style="stroke-opacity:0"
+			    ></path>
 			</svg>
-			<div class="face-progress-circle-info">99.99%</div>
+			<div class="face-progress-circle-info">0%</div>
 		</div>
-		<div class="face-progress-circle face-progress-circle--theme-success">
+		<div class="face-progress-circle">
 			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
-				<path class="face-progress-circle-svg-outer" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" ></path>
-			    <path class="face-progress-circle-svg-inner" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke-dashoffset="295.31px"></path>
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+					    style="stroke-dashoffset:100px"
+			    ></path>
+			</svg>
+			<div class="face-progress-circle-info">55%</div>
+		</div>
+		<div class="face-progress-circle face-progress-circle--success">
+			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+					    style="stroke-dashoffset:100px"
+			    ></path>
 			</svg>
 			<div class="face-progress-circle-info">
 				<span class="fi fi-check-of"></span>
 			</div>
 		</div>
-		<div class="face-progress-circle face-progress-circle--theme-danger">
+		<div class="face-progress-circle face-progress-circle--error">
 			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
-				<path class="face-progress-circle-svg-outer" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" ></path>
-			    <path class="face-progress-circle-svg-inner" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke-dashoffset="295.31px"></path>
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+					    style="stroke-dashoffset:100px"
+			    ></path>
 			</svg>
 			<div class="face-progress-circle-info">
 				<span class="fi fi-close-of"></span>
@@ -165,8 +192,13 @@
 		</div>
 		<div class="face-progress-circle face-progress-circle--dashboard">
 			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
-				<path class="face-progress-circle-svg-outer" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"></path>
-			    <path class="face-progress-circle-svg-inner" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke-dashoffset="221.5px"></path>
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+					    style="stroke-dashoffset:100px"
+			    ></path>
 			</svg>
 			<div class="face-progress-circle-info">仪表盘</div>
 		</div>
@@ -174,10 +206,15 @@
 	<div style="width:200px;font-size: 32px;">
 		<div class="face-progress-circle">
 			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
-				<path class="face-progress-circle-svg-outer" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" ></path>
-			    <path class="face-progress-circle-svg-inner" d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" stroke-dashoffset="295.31px"></path>
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" 
+					    style="stroke-dashoffset:100px"
+			    ></path>
 			</svg>
-			<div class="face-progress-circle-info">99.99%</div>
+			<div class="face-progress-circle-info">55.55%</div>
 		</div>
 	</div>
 </body>
