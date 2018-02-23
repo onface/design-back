@@ -1,0 +1,172 @@
+@import "./settings.less";
+
+.faceCheckboxCheckedInnerStyle() {
+    height: 0.375em;
+    width: 0.625em;
+    top: 20%;
+    left: 16%;
+    background-color: transparent;
+    margin:0;
+    border-style: solid;  
+    border-width: 0 0 0.125em 0.125em;
+}
+.@{prefix} { // computer height 30
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    width: 1em;
+    height: 1em;
+    margin-right: 0.1875em;
+    padding-top: 0.4375em;
+    padding-bottom: 0.4375em;
+    
+}
+// 对齐文字
+.@{prefix} + * {
+    font-size: 1em;
+    line-height: 1.875em;
+    display: inline-block;
+    vertical-align: middle;
+}
+.@{prefix}-cnt {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    &:hover .@{prefix}-cnt-mark {
+        border-color: #3b99fc;
+        box-shadow: inset 0 1px 1px rgba(45, 140, 240, 0.2);
+    }
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+.@{prefix}-cnt-input {
+    opacity: 0;
+    filter:alpha(opacity=0);
+    position: absolute;
+    cursor: pointer;
+    margin: 0;border: 0;padding: 0;
+    left: 0;right: 0;top: 0;bottom: 0;
+    width: 100%; height: 100%; 
+}
+.@{prefix}-cnt-mark {
+    box-sizing: border-box;
+    display: block;
+    border: 1px solid #BCBCBC;
+    border-radius: .3em;
+    background-color:#fff;
+    box-shadow: inset 0px 1px 1px #DEDEDE;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    &:before {
+        display:inline-block;
+        content: ' ';
+        box-sizing: border-box;
+        position: absolute;
+        border-color: #fff;  
+        .faceCheckboxCheckedInnerStyle;
+
+        -webkit-transform: rotate(-55deg) scale(0.01) ;
+           -moz-transform: rotate(-55deg) scale(0.01) ;
+             -o-transform: rotate(-55deg) scale(0.01) ;
+                transform: rotate(-55deg) scale(0.01) ;
+
+        opacity: 0;
+        filter:alpha(opacity=0);
+
+        -webkit-transform-origin: center; /* Safari 和 Chrome */
+           -moz-transform-origin: center; /* Firefox 4 */
+             -o-transform-origin: center; /* Opera */
+                transform-origin: center;
+
+    }
+}
+
+
+
+// themes
+    .@{prefix}--themes-partial {
+        .@{prefix}-cnt-mark {
+            background-color:#3b99fc;
+            border-color: #3b99fc;
+            box-shadow: none;
+            &:before {
+                height: 0.125em;
+                width: 0.75em;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                top: 50%;
+                margin-top: -0.0625em;
+                background-color: #fff;
+                transform: none ;
+                opacity: 1;
+                filter:alpha(opacity=100);
+            }
+        }
+        .@{prefix}-cnt--checked {
+            .@{prefix}-cnt-mark {
+                &:before {
+                    .faceCheckboxCheckedInnerStyle;
+                }
+            }
+        }
+    }
+
+// checked focus disabled 顺序不可更换
+    .@{prefix}-cnt--checked {
+        .@{prefix}-cnt-mark {
+            background-color:#3b99fc;
+            border-color: #3b99fc;
+            // box-shadow: inset 0px 1px 1px lighten(#3b99fc, 5%);
+            box-shadow: none;
+            @-webkit-keyframes checkedAnimate {
+                0% {   opacity: 1; }
+                30% {  transform: rotate(-55deg) scale(0.01) ; opacity: 0; }
+                31% {  transform: rotate(-55deg) scale(0.01) ; opacity: 0;   .faceCheckboxCheckedInnerStyle;}
+                60% {  transform: rotate(-55deg) scale(1.6) ;  opacity: 0.5; .faceCheckboxCheckedInnerStyle;}
+                100% { transform: rotate(-55deg) scale(1) ;    opacity: 1;   .faceCheckboxCheckedInnerStyle;}
+            }
+            @keyframes checkedAnimate {
+                0% {   opacity: 1; }
+                30% {  transform: rotate(-55deg) scale(0.01) ; opacity: 0; }
+                31% {  transform: rotate(-55deg) scale(0.01) ; opacity: 0;   .faceCheckboxCheckedInnerStyle;}
+                60% {  transform: rotate(-55deg) scale(1.6) ;  opacity: 0.5; .faceCheckboxCheckedInnerStyle;}
+                100% { transform: rotate(-55deg) scale(1) ;    opacity: 1;   .faceCheckboxCheckedInnerStyle;}
+            }
+            &:before {
+                filter:alpha(opacity=100);
+                opacity: 1;
+                transform: rotate(-55deg) scale(1) ;
+
+                -webkit-animation: checkedAnimate 0.36s ease-in-out;
+                        animation: checkedAnimate 0.36s ease-in-out;
+            }
+        }
+    }
+    .@{prefix}-cnt--focus,
+    .@{prefix}-cnt--checked.@{prefix}-cnt--focus {
+        &:hover .@{prefix}-cnt-mark ,
+        .@{prefix}-cnt-mark {
+            box-shadow: 0 0 0 0.125em rgba(45, 140, 240, 0.2);
+            outline: 0.125em rgba(45,140,240,0.2);
+        }
+    }
+    .@{prefix}-cnt--disabled {
+        &:hover .@{prefix}-cnt-mark ,
+        .@{prefix}-cnt-mark {
+            border-color:#CCC;
+            background-color:#EEE;
+            box-shadow: inset 0px 1px 1px #DEDEDE;
+            &:before {
+                border-color:#AAA;
+            }
+        }
+    }
