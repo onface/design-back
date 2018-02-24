@@ -12,23 +12,9 @@
     padding-top: 0.4375em;
     padding-bottom: 0.4375em;
     
-}
-// 对齐文字
-.@{prefix} + * {
-    font-size: 1em;
-    line-height: 1.875em;
-    display: inline-block;
-    vertical-align: middle;
-    color: rgba(0, 0, 0, 0.65);
-}
-.@{prefix}-cnt {
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    &:hover .@{prefix}-cnt-mark {
-        border-color: #3b99fc;
-        box-shadow: inset 0 1px 1px rgba(45, 140, 240, 0.2);
+    &:hover .@{prefix}-mark {
+        border-color: @face-checkbox-active-color;
+        box-shadow: inset 0 1px 1px @face-checkbox-shadow-active-color;
     }
     -webkit-transition: all 0.2s;
        -moz-transition: all 0.2s;
@@ -36,7 +22,15 @@
          -o-transition: all 0.2s;
             transition: all 0.2s;
 }
-.@{prefix}-cnt-input {
+// 对齐文字
+.@{prefix} + * {
+    font-size: 1em;
+    line-height: 1.875em;
+    display: inline-block;
+    vertical-align: middle;
+    color: @face-checkbox-text-color;
+}
+.@{prefix}-input {
     opacity: 0;
     filter:alpha(opacity=0);
     position: absolute;
@@ -45,13 +39,13 @@
     left: 0;right: 0;top: 0;bottom: 0;
     width: 100%; height: 100%; 
 }
-.@{prefix}-cnt-mark {
+.@{prefix}-mark {
     box-sizing: border-box;
     display: block;
-    border: 1px solid #BCBCBC;
+    border: 1px solid @face-checkbox-default-color;
     border-radius: .3em;
-    background-color:#fff;
-    box-shadow: inset 0px 1px 1px #DEDEDE;
+    background-color:@face-checkbox-icon-color;
+    box-shadow: inset 0px 1px 1px @face-checkbox-shadow-color;
     width: 100%;
     position: relative;
     height: 100%;
@@ -61,7 +55,7 @@
         content: ' ';
         box-sizing: border-box;
         position: absolute;
-        border-color: #fff;  
+        border-color: @face-checkbox-icon-color;  
         .faceCheckboxCheckedInnerStyle;
 
         -webkit-transform: rotate(-55deg) scale(0.01) ;
@@ -79,7 +73,6 @@
 
     }
 }
-
 
 
 // themes

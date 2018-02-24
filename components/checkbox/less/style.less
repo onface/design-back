@@ -2,11 +2,10 @@
 @import "./extend.less";
 
 // checked focus disabled 顺序不可更换
-.@{prefix}-cnt--checked {
-    .@{prefix}-cnt-mark {
-        background-color:#3b99fc;
-        border-color: #3b99fc;
-        // box-shadow: inset 0px 1px 1px lighten(#3b99fc, 5%);
+.@{prefix}--checked {
+    .@{prefix}-mark {
+        background-color: @face-checkbox-active-color;
+        border-color: @face-checkbox-active-color;
         box-shadow: none;
         @-webkit-keyframes checkedAnimate {
             0% {   opacity: 1; }
@@ -32,22 +31,26 @@
         }
     }
 }
-.@{prefix}-cnt--focus,
-.@{prefix}-cnt--checked.@{prefix}-cnt--focus {
-    &:hover .@{prefix}-cnt-mark ,
-    .@{prefix}-cnt-mark {
-        box-shadow: 0 0 0 0.125em rgba(45, 140, 240, 0.2);
-        outline: 0.125em rgba(45,140,240,0.2);
+.@{prefix}--focus,
+.@{prefix}--focus.@{prefix}--checked {
+    &:hover .@{prefix}-mark ,
+    .@{prefix}-mark {
+        box-shadow: 0 0 0 0.125em @face-checkbox-shadow-active-color;
+        // outline: 0.125em rgba(45,140,240,0.2);
     }
 }
-.@{prefix}-cnt--disabled {
-    &:hover .@{prefix}-cnt-mark ,
-    .@{prefix}-cnt-mark {
-        border-color:#CCC;
-        background-color:#EEE;
+.@{prefix}--disabled,
+.@{prefix}--disabled.@{prefix}--checked {
+    &:hover .@{prefix}-mark ,
+    .@{prefix}-mark {
+        border-color:@face-checkbox-default-color;
+        background-color:@face-checkbox-shadow-color;
         box-shadow: inset 0px 1px 1px #DEDEDE;
         &:before {
-            border-color:#AAA;
+            border-color:@face-checkbox-icon-disable-color;
         }
+    }
+    & + * {
+    	color: @face-checkbox-text-disable-color;
     }
 }
