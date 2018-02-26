@@ -36,11 +36,11 @@
     &:hover .@{prefix}-mark ,
     .@{prefix}-mark {
         box-shadow: 0 0 0 0.125em @face-checkbox-shadow-active-color;
-        // outline: 0.125em rgba(45,140,240,0.2);
     }
 }
 .@{prefix}--disabled,
 .@{prefix}--disabled.@{prefix}--checked {
+    cursor: not-allowed;
     &:hover .@{prefix}-mark ,
     .@{prefix}-mark {
         border-color:@face-checkbox-default-color;
