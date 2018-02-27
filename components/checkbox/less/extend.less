@@ -13,20 +13,20 @@
 
 
 .faceCheckboxStyle(@border, @shadow) {
-	&:hover .@{prefix}-mark {
+	&:hover .@{prefix}-switch-icon {
         border-color: @border;
         box-shadow: inset 0 1px 1px @shadow;
     }
     &.@{prefix}--checked {
-	    .@{prefix}-mark {
+	    .@{prefix}-switch-icon {
 	        background-color: @border;
 	        border-color: @border;
 	    }
 	}
 	&.@{prefix}--focus,
 	&.@{prefix}--focus.@{prefix}--checked {
-	    &:hover .@{prefix}-mark ,
-	    .@{prefix}-mark {
+	    &:hover .@{prefix}-switch-icon ,
+	    .@{prefix}-switch-icon {
 	        box-shadow: 0 0 0 0.125em @shadow;
 	    }
 	}
