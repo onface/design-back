@@ -82,11 +82,17 @@
     & + & {
         margin-left: 0.625em;
     }
+    & > label,
+    & > .@{prefix} {
+        &:not(:first-child) {
+            margin-left: 0.625em;
+        }
+    }
 }
     .@{prefix}-group--border {
         .@{prefix} {
             margin: 0;
-            // display: none;
+            display: none;
             padding-top: 0.375em;
             padding-bottom: 0.375em;
             & + * {
@@ -132,7 +138,7 @@
             }
         }
     }
-    .face-radio-group--horiz {
+    .@{prefix}-group--horiz {
         display: inline-grid;
         & > label,
         & > .@{prefix} {
@@ -144,6 +150,19 @@
             }
             &:not(:first-child) {
                 margin: -1px 0 0 0 ;
+            }
+        }
+    }
+    .@{prefix}-group--separate.@{prefix}-group--horiz {
+        & > label,
+        & > .@{prefix} {
+            &:first-child, 
+            &:last-child,
+            &:not(:first-child) {
+                border-radius: .18em;
+            }
+            &:not(:first-child) {
+                margin: 0.625em 0 0 0 ;
             }
         }
     }
