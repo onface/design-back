@@ -71,17 +71,13 @@
             box-shadow: none;
         }
     }
-    .@{prefix}--disabled {
-        border-color:@face-radio-default-color;
-        // background-color:@face-radio-shadow-color;
-        
-    }
     .@{prefix}--disabled.@{prefix}--checked {
-        border-color:@face-radio-default-color;
         background-color:@face-radio-shadow-color;
     }
     .@{prefix}--disabled,
     .@{prefix}--disabled.@{prefix}--checked {
+        z-index: 0;
+        border-color:@face-radio-default-color;
         &:hover .@{prefix}-label,
         .@{prefix}-label {
             color: @face-radio-text-disable-color;
