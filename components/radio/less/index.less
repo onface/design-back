@@ -78,9 +78,14 @@
     vertical-align: middle;
     color: @face-radio-text-color;
     cursor: inherit;
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
 }
 
-.@{prefix}-group {
+.@{prefix}Group {
     // display: inline-block;
     display: flex;
     display: inline-flex;
@@ -89,32 +94,38 @@
     & + & {
         margin-left: .625em;
     }
-    & > label,
-    & > .@{prefix} {
+    .@{prefix} {
         &:not(:first-child) {
             margin-left: .625em;
         }
     }
+    .@{prefix}-label {
+        padding-right: 0;
+    }
 }
-    .@{prefix}-group--border {
-        .@{prefix} {
-            margin: 0;
+    .@{prefix}Group--hideicon {
+        .@{prefix}-switch {
             display: none;
+        }
+
+    }
+    .@{prefix}Group--border {
+        .@{prefix}-switch {
+            margin: 0;
             padding-top: .375em;
             padding-bottom: .375em;
-            & + * {
-                line-height: 1.8em;
-            }
         }
-        & > label,
-        & > .@{prefix} {
+        .@{prefix}-label {
+            line-height: 1.8em;
+        }
+        .@{prefix} {
             // align-items: flex-start;
             display: inline-block;
             border-radius: 0;
             border: 1px solid #d9d9d9;
             // padding-left: .3125em;
-            padding-left: .5em;
-            padding-right: .5em;
+            padding-left: 0.625em;
+            padding-right: 0.625em;
             border-radius: 0;
             &:first-child {
                 border-radius: .18em 0 0 .18em;
@@ -125,14 +136,16 @@
             &:not(:first-child) {
                 margin: 0 0 0 -1px;
             }
+            &:hover .@{prefix}-label {
+                color: @face-radio-active-color;
+            }
         }
     }
-    .@{prefix}-group--separate {
+    .@{prefix}Group--separate {
+        // .@{prefix}-switch {
+        //     display: inline-block;
+        // }
         .@{prefix} {
-            display: inline-block;
-        }
-        & > label,
-        & > .@{prefix} {
             &,
             &:first-child,
             &:last-child {
@@ -145,10 +158,9 @@
             }
         }
     }
-    .@{prefix}-group--horiz {
+    .@{prefix}Group--horiz {
         display: inline-grid;
-        & > label,
-        & > .@{prefix} {
+        .@{prefix} {
             &:first-child {
                 border-radius: .18em .18em 0 0;
             }
@@ -160,9 +172,8 @@
             }
         }
     }
-    .@{prefix}-group--separate.@{prefix}-group--horiz {
-        & > label,
-        & > .@{prefix} {
+    .@{prefix}Group--separate.@{prefix}Group--horiz {
+        .@{prefix} {
             &:first-child, 
             &:last-child,
             &:not(:first-child) {
