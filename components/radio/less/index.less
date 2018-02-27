@@ -6,41 +6,30 @@
     vertical-align: middle;
     cursor: pointer;
     position: relative;
-    width: 1em;
-    height: 1em;
-    margin-right: 0.1875em;
-    margin-left: 0.1875em;
-    padding-top: 0.4375em;
-    padding-bottom: 0.4375em;
+    // margin-right: .1875em;
+    // margin-left: .1875em;
+    // padding-top: .4375em;
+    // padding-bottom: .4375em;
     
-    &:hover .@{prefix}-mark {
+    &:hover .@{prefix}-switch-icon {
         border-color: @face-radio-active-color;
         box-shadow: inset 0 1px 1px @face-radio-shadow-active-color;
     }
-    -webkit-transition: all 0.2s;
-       -moz-transition: all 0.2s;
-        -ms-transition: all 0.2s;
-         -o-transition: all 0.2s;
-            transition: all 0.2s;
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
 }
-// 对齐文字
-.@{prefix} + * {
-    font-size: 1em;
-    line-height: 1.875em;
+.@{prefix}-switch {
+    width: 1em;
+    height: 1em;
     display: inline-block;
     vertical-align: middle;
-    color: @face-radio-text-color;
+    margin-right: .1875em;
+    margin-left: .1875em;
 }
-.@{prefix}-input {
-    opacity: 0;
-    filter:alpha(opacity=0);
-    position: absolute;
-    cursor: inherit;
-    margin: 0;border: 0;padding: 0;
-    left: 0;right: 0;top: 0;bottom: 0;
-    width: 100%; height: 100%; 
-}
-.@{prefix}-mark {
+.@{prefix}-switch-icon {
     box-sizing: border-box;
     display: block;
     border: 1px solid @face-radio-default-color;
@@ -57,10 +46,10 @@
         background-color: @face-radio-icon-color;  
         .faceRadioCheckedInnerStyle;
 
-        -webkit-transform: scale(0.01) ;
-           -moz-transform: scale(0.01) ;
-             -o-transform: scale(0.01) ;
-                transform: scale(0.01) ;
+        -webkit-transform: scale(.01) ;
+           -moz-transform: scale(.01) ;
+             -o-transform: scale(.01) ;
+                transform: scale(.01) ;
 
         opacity: 0;
         filter:alpha(opacity=0);
@@ -72,6 +61,24 @@
 
     }
 }
+.@{prefix}-switch-input {
+    opacity: 0;
+    filter:alpha(opacity=0);
+    position: absolute;
+    cursor: inherit;
+    margin: 0;border: 0;padding: 0;
+    left: 0;right: 0;top: 0;bottom: 0;
+    width: 100%; height: 100%; 
+}
+.@{prefix}-label {
+    font-size: 1em;
+    line-height: 1.875em;
+    padding-right: .3125em;
+    display: inline-block;
+    vertical-align: middle;
+    color: @face-radio-text-color;
+    cursor: inherit;
+}
 
 .@{prefix}-group {
     // display: inline-block;
@@ -80,12 +87,12 @@
     vertical-align: middle;
     white-space: nowrap;
     & + & {
-        margin-left: 0.625em;
+        margin-left: .625em;
     }
     & > label,
     & > .@{prefix} {
         &:not(:first-child) {
-            margin-left: 0.625em;
+            margin-left: .625em;
         }
     }
 }
@@ -93,8 +100,8 @@
         .@{prefix} {
             margin: 0;
             display: none;
-            padding-top: 0.375em;
-            padding-bottom: 0.375em;
+            padding-top: .375em;
+            padding-bottom: .375em;
             & + * {
                 line-height: 1.8em;
             }
@@ -105,9 +112,9 @@
             display: inline-block;
             border-radius: 0;
             border: 1px solid #d9d9d9;
-            // padding-left: 0.3125em;
-            padding-left: 0.5em;
-            padding-right: 0.5em;
+            // padding-left: .3125em;
+            padding-left: .5em;
+            padding-right: .5em;
             border-radius: 0;
             &:first-child {
                 border-radius: .18em 0 0 .18em;
@@ -132,8 +139,8 @@
                 border-radius: .18em;
             }
             &:not(:first-child) {
-                // margin-right: 0.625em;
-                margin-left: 0.625em;
+                // margin-right: .625em;
+                margin-left: .625em;
                 // margin: 0;
             }
         }
@@ -162,7 +169,7 @@
                 border-radius: .18em;
             }
             &:not(:first-child) {
-                margin: 0.625em 0 0 0 ;
+                margin: .625em 0 0 0 ;
             }
         }
     }
