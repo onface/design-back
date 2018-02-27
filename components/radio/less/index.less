@@ -9,6 +9,7 @@
     width: 1em;
     height: 1em;
     margin-right: 0.1875em;
+    margin-left: 0.1875em;
     padding-top: 0.4375em;
     padding-bottom: 0.4375em;
     
@@ -71,6 +72,83 @@
 
     }
 }
+
+.@{prefix}-group {
+    // display: inline-block;
+    display: flex;
+    display: inline-flex;
+    vertical-align: middle;
+    white-space: nowrap;
+    & + & {
+        margin-left: 0.625em;
+    }
+}
+    .@{prefix}-group--border {
+        .@{prefix} {
+            margin: 0;
+            // display: none;
+            padding-top: 0.375em;
+            padding-bottom: 0.375em;
+            & + * {
+                line-height: 1.8em;
+            }
+        }
+        & > label,
+        & > .@{prefix} {
+            // align-items: flex-start;
+            display: inline-block;
+            border-radius: 0;
+            border: 1px solid #d9d9d9;
+            // padding-left: 0.3125em;
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+            border-radius: 0;
+            &:first-child {
+                border-radius: .18em 0 0 .18em;
+            }
+            &:last-child {
+                border-radius: 0 .18em .18em 0;
+            }
+            &:not(:first-child) {
+                margin: 0 0 0 -1px;
+            }
+        }
+    }
+    .@{prefix}-group--separate {
+        .@{prefix} {
+            display: inline-block;
+        }
+        & > label,
+        & > .@{prefix} {
+            &,
+            &:first-child,
+            &:last-child {
+                border-radius: .18em;
+            }
+            &:not(:first-child) {
+                // margin-right: 0.625em;
+                margin-left: 0.625em;
+                // margin: 0;
+            }
+        }
+    }
+    .face-radio-group--horiz {
+        display: inline-grid;
+        & > label,
+        & > .@{prefix} {
+            &:first-child {
+                border-radius: .18em .18em 0 0;
+            }
+            &:last-child {
+                border-radius: 0 0 .18em .18em;
+            }
+            &:not(:first-child) {
+                margin: -1px 0 0 0 ;
+            }
+        }
+    }
+
+
 
 
 // themes
