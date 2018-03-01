@@ -3,10 +3,11 @@
 .faceCheckboxCheckedInnerStyle() {
     height: 0.375em;
     width: 0.625em;
-    top: 0.1875em;
-    left: 0.11875em;
+    top: 0; left: 0; right: 0;bottom: 0;
     background-color: transparent;
-    margin:0;
+    margin: auto;
+    margin-top: 0.21875em ; // calc( height/4 + borderWidth ) => calc( 0.375em/4 + 0.125em )
+    margin-left: 0.14375em ; // calc( height/4 + borderWidth/5*2 ) => calc( 0.375em/4 + 0.125em/5*2 )
     border-style: solid;  
     border-width: 0 0 0.125em 0.125em;
 }
