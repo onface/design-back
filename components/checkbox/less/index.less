@@ -1,0 +1,86 @@
+@import "./settings.less";
+@import "./extend.less";
+
+.@{prefix} { // calculate amount height 30
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+    
+    &:hover .@{prefix}-switch-icon {
+        border-color: @face-checkbox-active-color;
+        box-shadow: inset 0 1px 1px @face-checkbox-shadow-active-color;
+    }
+    -webkit-transition: all .2s;
+       -moz-transition: all .2s;
+        -ms-transition: all .2s;
+         -o-transition: all .2s;
+            transition: all .2s;
+}
+.@{prefix}-switch {
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .1875em;
+    margin-left: .1875em;
+}
+.@{prefix}-switch-icon {
+    box-sizing: border-box;
+    display: block;
+    border: 1px solid @face-checkbox-default-color;
+    border-radius: .25em;
+    background-color:@face-checkbox-icon-color;
+    box-shadow: inset 0px 1px 1px @face-checkbox-shadow-color;
+    width: 100%;
+    position: relative;
+    height: 100%;
+    text-align: center;
+    &:before {
+        display:inline-block;
+        content: ' ';
+        box-sizing: border-box;
+        position: absolute;
+        border-color: @face-checkbox-icon-color;  
+        .faceCheckboxCheckedInnerStyle;
+
+        -webkit-transform: rotate(-55deg) scale(.01) ;
+           -moz-transform: rotate(-55deg) scale(.01) ;
+             -o-transform: rotate(-55deg) scale(.01) ;
+                transform: rotate(-55deg) scale(.01) ;
+
+        opacity: 0;
+        filter:alpha(opacity=0);
+
+        -webkit-transform-origin: center; /* Safari 和 Chrome */
+           -moz-transform-origin: center; /* Firefox 4 */
+             -o-transform-origin: center; /* Opera */
+                transform-origin: center;
+
+    }
+}
+.@{prefix}-switch-input {
+    opacity: 0;
+    filter:alpha(opacity=0);
+    position: absolute;
+    cursor: inherit;
+    margin: 0;border: 0;padding: 0;
+    left: 0;right: 0;top: 0;bottom: 0;
+    width: 100%; height: 100%; 
+}
+.@{prefix}-label {
+    font-size: 1em;
+    line-height: 1.875em;
+    padding-right: .3125em;
+    display: inline-block;
+    vertical-align: middle;
+    color: @face-checkbox-text-color;
+    cursor: inherit;
+}
+
+
+// themes
+@import "./themes.less";
+
+// style
+@import "./style.less";
