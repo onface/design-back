@@ -8,18 +8,19 @@
     position: relative;
     line-height: 1em;
     display: table;
+    border-collapse: separate;
+    border-collapse: initial;
     width: 100%;
-    & + & {
-        margin-top: 0.5em;
-    }
+    padding-bottom: .4375em;
+    padding-top: .4375em;
 }
 .@{prefix}-line-box {
     width: 100%;
     vertical-align: middle;
     position: relative;
     display: table-cell;
-    padding-bottom: 0.3125em;
-    padding-top: 0.3125em;
+    // padding-bottom: 0.3125em;
+    // padding-top: 0.3125em;
 }
 .@{prefix}-line-box-track {
     position: relative;
@@ -90,6 +91,7 @@
 // 圆环样式
 .@{prefix}-circle {
     position: relative;
+    line-height: 0; // 消除下边间隔
 }
 .@{prefix}-circle-svg-outer {
     stroke-linecap: round ;
