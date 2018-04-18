@@ -1,0 +1,99 @@
+@import "./settings.less";
+.@{face-input-prefix} {
+    width: 100%;
+    display: table;
+    border-collapse:collapse;
+    color:@face-font-color;
+    vertical-align: middle;
+}
+
+.@{face-input-prefix}-input {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: table-cell;
+    border:1px solid @face-input-border-color;
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    line-height: @face-input-line-height;
+    border-radius: @face-input-border-radius;
+    padding-left: @face-input-side-padding;
+    padding-right: @face-input-side-padding;
+    transition: box-shadow .3s;
+    box-shadow: 0 0 0 0 transparent;
+    &::placeholder {
+        color: @face-placeholder-font-color;
+    }
+    &:focus{
+        outline: none;
+        box-shadow: 0 0 0 0.125em #dbebfd;
+        border-color:#4a99f3;
+    }
+}
+.@{face-input-prefix}--prepend {
+    .@{face-input-prefix}-input {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
+.@{face-input-prefix}-prepend {
+    display: table-cell;
+    white-space: nowrap;
+    vertical-align: middle;
+    width: 1px;
+    background-color: #fafafa;
+    position: relative;
+}
+.@{face-input-prefix}-prepend-wrap {
+    display: block;
+    padding-left: .4em;
+    padding-right: .4em;
+    margin-right: -1px;
+    line-height: @face-input-line-height;
+    background-color: #fafafa;
+    border:1px solid @face-input-border-color;
+    border-top-left-radius: @face-input-border-radius;
+    border-bottom-left-radius: @face-input-border-radius;
+}
+.@{face-input-prefix}-prepend-wrap-content {
+    font-size: .9em;
+}
+.@{face-input-prefix}--append {
+    .@{face-input-prefix}-input {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+.@{face-input-prefix}-append {
+    display: table-cell;
+    white-space: nowrap;
+    vertical-align: middle;
+    width: 1px;
+    background-color: #fafafa;
+    position: relative;
+}
+.@{face-input-prefix}-append-wrap {
+    display: block;
+    padding-left: .4em;
+    padding-right: .4em;
+    margin-left: -1px;
+    line-height: @face-input-line-height;
+    background-color: #fafafa;
+    border:1px solid @face-input-border-color;
+    border-top-right-radius: @face-input-border-radius;
+    border-bottom-right-radius: @face-input-border-radius;
+}
+.@{face-input-prefix}-append-wrap-content {
+    font-size: .9em;
+}
+
+// .@{face-input-prefix}{
+//     outline: none;
+//     display: inline-block;
+//     border: none;
+//     background: transparent;
+//     padding: 0;
+//     margin: 0;
+//     line-height: @face-input-line-height;
+// }
