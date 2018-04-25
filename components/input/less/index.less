@@ -6,7 +6,16 @@
     color:@face-font-color;
     vertical-align: middle;
 }
-
+    .@{face-input-prefix}--error {
+        .@{face-input-prefix}-input {
+            border-color:@face-input-error-color;
+            &:focus{
+                outline: none;
+                box-shadow: 0 0 0 0.125em lighten(@face-input-error-color, 35%);
+                border-color:@face-input-error-color;
+            }
+        }
+    }
 .@{face-input-prefix}-input {
     width: 100%;
     position: relative;
@@ -22,13 +31,14 @@
     padding-right: @face-input-side-padding;
     transition: box-shadow .3s;
     box-shadow: 0 0 0 0 transparent;
+    color:@face-input-text-color;
     &::placeholder {
-        color: @face-placeholder-font-color;
+        color: @face-input-placeholder-font-color;
     }
     &:focus{
         outline: none;
-        box-shadow: 0 0 0 0.125em #dbebfd;
-        border-color:#4a99f3;
+        box-shadow: 0 0 0 0.125em @face-input-focus-color;
+        border-color:@face-input-focus-border-color;
     }
 }
 .@{face-input-prefix}--prepend {
@@ -42,22 +52,21 @@
     white-space: nowrap;
     vertical-align: middle;
     width: 1px;
-    background-color: #fafafa;
+    background-color: @face-input-default-bg-color;
     position: relative;
 }
 .@{face-input-prefix}-prepend-wrap {
     display: block;
-    padding-left: .4em;
-    padding-right: .4em;
     margin-right: -1px;
     line-height: @face-input-line-height;
-    background-color: #fafafa;
+    background-color: @face-input-default-bg-color;
     border:1px solid @face-input-border-color;
     border-top-left-radius: @face-input-border-radius;
     border-bottom-left-radius: @face-input-border-radius;
 }
 .@{face-input-prefix}-prepend-wrap-content {
-    font-size: .9em;
+    padding-left: .4em;
+    padding-right: .4em;
 }
 .@{face-input-prefix}--append {
     .@{face-input-prefix}-input {
@@ -70,30 +79,134 @@
     white-space: nowrap;
     vertical-align: middle;
     width: 1px;
-    background-color: #fafafa;
+    background-color: @face-input-default-bg-color;
     position: relative;
 }
 .@{face-input-prefix}-append-wrap {
     display: block;
-    padding-left: .4em;
-    padding-right: .4em;
     margin-left: -1px;
     line-height: @face-input-line-height;
-    background-color: #fafafa;
+    background-color: @face-input-default-bg-color;
     border:1px solid @face-input-border-color;
     border-top-right-radius: @face-input-border-radius;
     border-bottom-right-radius: @face-input-border-radius;
 }
 .@{face-input-prefix}-append-wrap-content {
-    font-size: .9em;
+    padding-left: .4em;
+    padding-right: .4em;
 }
 
-// .@{face-input-prefix}{
-//     outline: none;
-//     display: inline-block;
-//     border: none;
-//     background: transparent;
-//     padding: 0;
-//     margin: 0;
-//     line-height: @face-input-line-height;
-// }
+
+.@{face-input-prefix}-search {
+    border:1px solid @face-input-border-color;
+    border-radius: @face-input-border-radius;
+    transition: box-shadow .3s;
+}
+.@{face-input-prefix}-search-inner {
+    width: 100%;
+    display: table;
+    border-collapse:collapse;
+    color:@face-font-color;
+    vertical-align: middle;
+}
+.@{face-input-prefix}-search-input {
+    display: table-cell;
+    padding: 0;
+    vertical-align: middle;
+    outline: none;
+
+}
+.@{face-input-prefix}-search-input-input {
+    width: 100%;
+    display: block;
+    padding: 0;
+    border: none;
+    outline: none;
+    line-height: @face-input-line-height;
+    background: none;
+    padding-left: @face-input-side-padding;
+    padding-right: @face-input-side-padding;
+    color:@face-input-text-color;
+}
+.@{face-input-prefix}-search-submit {
+    display: table-cell;
+    white-space: nowrap;
+    vertical-align: middle;
+    width: 1px;
+    position: relative;
+
+}
+@keyframes faceInputSearchShadowEffect {
+  to {
+    opacity: 0;
+    top: -0.3em;
+    left: -0.3em;
+    bottom: -0.3em;
+    right: -0.3em;
+    border-width: 0.3em;
+  }
+}
+.@{face-input-prefix}-search-submit-submit {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 0;
+    border: none;
+    line-height: @face-input-line-height;
+    padding-left: .5em;
+    padding-right: .5em;
+    background: none;
+    border-top-right-radius: @face-input-border-radius;
+    border-bottom-right-radius: @face-input-border-radius;
+    box-shadow: 0px 0px 0px 1px @face-input-search-bg-color;
+    background-color: @face-input-search-bg-color;
+    color:@face-input-search-font-color;
+    outline: none;
+    transform: opacity .3s;
+}
+html .@{face-input-prefix}-search-submit-submit {
+    -webkit-appearance: none;
+}
+/*ant-design/blob/master/components/button/style/index.less#L134*/
+.@{face-input-prefix}-search-submit-submit--clicked:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  border-radius: inherit;
+  border: 0 solid darken(@face-input-search-bg-color, 20%);
+  opacity: 0.5;
+    animation: faceInputSearchShadowEffect .4s;
+  display: block;
+}
+
+.@{face-input-prefix}-search--focus {
+    box-shadow: 0 0 0 0.125em @face-input-focus-color;
+    border-color:@face-input-focus-border-color;
+}
+
+.@{face-input-prefix}-search--ghost {
+    .@{face-input-prefix}-search-submit-submit {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        color:@face-input-text-color;
+        opacity: .7;
+    }
+    .@{face-input-prefix}-search-submit-submit--clicked {
+        opacity: 1;
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.@{face-input-prefix}--large {
+    font-size: 1.2em;
+}
+.@{face-input-prefix}--small {
+    font-size: 0.8em;
+}
