@@ -99,112 +99,6 @@
 }
 
 
-.@{face-input-prefix}-search {
-    border:1px solid @face-input-border-color;
-    border-radius: @face-input-border-radius;
-    transition: box-shadow .3s;
-}
-.@{face-input-prefix}-search-inner {
-    width: 100%;
-    display: table;
-    border-collapse:collapse;
-    color:@face-font-color;
-    vertical-align: middle;
-}
-.@{face-input-prefix}-search-input {
-    display: table-cell;
-    padding: 0;
-    vertical-align: middle;
-    outline: none;
-
-}
-.@{face-input-prefix}-search-input-input {
-    width: 100%;
-    display: block;
-    padding: 0;
-    border: none;
-    outline: none;
-    line-height: @face-input-line-height;
-    background: none;
-    padding-left: @face-input-side-padding;
-    padding-right: @face-input-side-padding;
-    color:@face-input-text-color;
-}
-.@{face-input-prefix}-search-submit {
-    display: table-cell;
-    white-space: nowrap;
-    vertical-align: middle;
-    width: 1px;
-    position: relative;
-
-}
-@keyframes faceInputSearchShadowEffect {
-  to {
-    opacity: 0;
-    top: -0.3em;
-    left: -0.3em;
-    bottom: -0.3em;
-    right: -0.3em;
-    border-width: 0.3em;
-  }
-}
-.@{face-input-prefix}-search-submit-submit {
-    cursor: pointer;
-    display: block;
-    width: 100%;
-    border: none;
-    padding: 0;
-    border: none;
-    line-height: @face-input-line-height;
-    padding-left: .5em;
-    padding-right: .5em;
-    background: none;
-    border-top-right-radius: @face-input-border-radius;
-    border-bottom-right-radius: @face-input-border-radius;
-    box-shadow: 0px 0px 0px 1px @face-input-search-bg-color;
-    background-color: @face-input-search-bg-color;
-    color:@face-input-search-font-color;
-    outline: none;
-    transform: opacity .3s;
-}
-html .@{face-input-prefix}-search-submit-submit {
-    -webkit-appearance: none;
-}
-/*ant-design/blob/master/components/button/style/index.less#L134*/
-.@{face-input-prefix}-search-submit-submit--clicked:before {
-  content: '';
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  right: -1px;
-  border-radius: inherit;
-  border: 0 solid darken(@face-input-search-bg-color, 20%);
-  opacity: 0.5;
-    animation: faceInputSearchShadowEffect .4s;
-  display: block;
-}
-
-.@{face-input-prefix}-search--focus {
-    box-shadow: 0 0 0 0.125em @face-input-focus-color;
-    border-color:@face-input-focus-border-color;
-}
-
-.@{face-input-prefix}-search--ghost {
-    .@{face-input-prefix}-search-submit-submit {
-        background: transparent;
-        border: none;
-        box-shadow: none;
-        color:@face-input-text-color;
-        opacity: .7;
-    }
-    .@{face-input-prefix}-search-submit-submit--clicked {
-        opacity: 1;
-        &:before {
-            display: none;
-        }
-    }
-}
 
 .@{face-input-prefix}--large {
     font-size: 1.2em;
@@ -237,21 +131,97 @@ html .@{face-input-prefix}-search-submit-submit {
         border-right: none;
     }
 }
-.@{face-input-prefix}--ghost {
+.@{face-input-prefix}--full-outline {
     border:1px solid @face-input-border-color;
     border-radius: @face-input-border-radius;
 
-    .@{face-input-prefix}-input,
-    .@{face-input-prefix}-prepend-wrap,
-    .@{face-input-prefix}-append-wrap {
+    .@{face-input-prefix}-input {
         border: none;
     }
+    .@{face-input-prefix}-prepend-wrap {
+        border-top:none;
+        border-left:none;
+        border-bottom:none;
+    }
+    .@{face-input-prefix}-append-wrap {
+        border-top:none;
+        border-right:none;
+        border-bottom:none;
+    }
 }
-html .@{face-input-prefix}--ghost.@{face-input-prefix}--focus{
+html .@{face-input-prefix}--full-outline.@{face-input-prefix}--focus{
     border-color: @face-input-focus-border-color;
     box-shadow: 0 0 0 0.125em @face-input-focus-color;
     .@{face-input-prefix}-input:focus{
         box-shadow: none;
         border:none;
     }
+}
+.@{face-input-prefix}--button {
+
+    .@{face-input-prefix}-append-wrap {
+        border: none;
+        line-height: 1;
+    }
+    .@{face-input-prefix}-prepend-wrap {
+        border-right: 1px solid @face-input-border-color;
+    }
+
+    .@{face-input-prefix}-append-wrap-content {
+        padding: 0;
+    }
+    .@{face-input-prefix}-append-wrap-content {
+        border-top-right-radius: 0px;
+    }
+}
+.@{face-input-prefix}--button-ghost {
+    .@{face-input-prefix}-append-wrap {
+        background: transparent;
+    }
+    .@{face-input-prefix}-append-wrap-content-btn {
+        background: transparent;
+        box-shadow: none;
+        color:@face-input-text-color;
+    }
+    .@{face-input-prefix}-append-wrap-content-btn--clicked:before  {
+        display: none;
+    }
+}
+@keyframes faceInputSearchShadowEffect {
+  to {
+    opacity: 0;
+    top: -0.3em;
+    left: -0.3em;
+    bottom: -0.3em;
+    right: -0.3em;
+    border-width: 0.3em;
+  }
+}
+.@{face-input-prefix}-append-wrap-content-btn {
+    padding:0;
+    border: none;
+    outline: none;
+    display: inline-block;
+    background-color: @face-input-btn--primary-color;
+    line-height: 1.8em;
+    color:white;
+    padding-left: .4em;
+    padding-right: .4em;
+    box-shadow:0px 0px 0px 1px @face-input-btn--primary-color;
+    border-top-right-radius: @face-input-border-radius;
+    border-bottom-right-radius: @face-input-border-radius;
+    cursor: pointer;
+}
+.@{face-input-prefix}-append-wrap-content-btn--clicked&:before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  bottom: -1px;
+  right: -1px;
+  border-radius: inherit;
+  border: 0 solid darken(@face-input-search-bg-color, 20%);
+  opacity: 0.5;
+    animation: faceInputSearchShadowEffect .4s;
+  display: block;
 }
