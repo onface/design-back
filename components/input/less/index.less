@@ -1,5 +1,8 @@
 @import "./settings.less";
 .@{face-input-prefix} {
+    background-color:white;
+}
+.@{face-input-prefix}-inner {
     width: 100%;
     display: table;
     border-collapse:collapse;
@@ -29,6 +32,7 @@
     border-radius: @face-input-border-radius;
     padding-left: @face-input-side-padding;
     padding-right: @face-input-side-padding;
+    background: transparent;
     transition: box-shadow .3s;
     box-shadow: 0 0 0 0 transparent;
     color:@face-input-text-color;
@@ -52,7 +56,6 @@
     white-space: nowrap;
     vertical-align: middle;
     width: 1px;
-    background-color: @face-input-default-bg-color;
     position: relative;
 }
 .@{face-input-prefix}-prepend-wrap {
@@ -79,7 +82,6 @@
     white-space: nowrap;
     vertical-align: middle;
     width: 1px;
-    background-color: @face-input-default-bg-color;
     position: relative;
 }
 .@{face-input-prefix}-append-wrap {
@@ -209,4 +211,47 @@ html .@{face-input-prefix}-search-submit-submit {
 }
 .@{face-input-prefix}--small {
     font-size: 0.8em;
+}
+.@{face-input-prefix}--append-ghost {
+    .@{face-input-prefix}-input {
+        padding-right: 0;
+        border-right:none;
+        border-top-right-radius: @face-input-border-radius;
+        border-bottom-right-radius: @face-input-border-radius;
+    }
+    .@{face-input-prefix}-append-wrap {
+        background: transparent;
+        border-left: none;
+    }
+}
+
+.@{face-input-prefix}--prepend-ghost {
+    .@{face-input-prefix}-input {
+        padding-left: 0;
+        border-left:none;
+        border-top-left-radius: @face-input-border-radius;
+        border-bottom-left-radius: @face-input-border-radius;
+    }
+    .@{face-input-prefix}-prepend-wrap {
+        background: transparent;
+        border-right: none;
+    }
+}
+.@{face-input-prefix}--ghost {
+    border:1px solid @face-input-border-color;
+    border-radius: @face-input-border-radius;
+
+    .@{face-input-prefix}-input,
+    .@{face-input-prefix}-prepend-wrap,
+    .@{face-input-prefix}-append-wrap {
+        border: none;
+    }
+}
+html .@{face-input-prefix}--ghost.@{face-input-prefix}--focus{
+    border-color: @face-input-focus-border-color;
+    box-shadow: 0 0 0 0.125em @face-input-focus-color;
+    .@{face-input-prefix}-input:focus{
+        box-shadow: none;
+        border:none;
+    }
 }
