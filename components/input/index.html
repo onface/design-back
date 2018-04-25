@@ -22,7 +22,9 @@
     <div class="face-input face-input--prepend">
         <span class="face-input-prepend">
             <span class="face-input-prepend-wrap">
-                <span class="fi fi-user"></span>
+                <span class="face-input-prepend-wrap-content">
+                    <span class="fi fi-user"></span>
+                </span>
             </span>
         </span>
         <input class="face-input-input" placeholder="请输入文字" />
@@ -81,6 +83,9 @@
     }
     .face-input---custom .face-input-input{
         border:1px solid purple;
+    }
+    .face-input---custom .face-input-input:focus {
+        box-shadow: 0px 0px 0px 2px rgba(128,0,128,.2);
     }
     </style>
     <div class="face-input face-input--append face-input--prepend face-input---custom">
@@ -193,6 +198,9 @@
     .face-input---custom-search.face-input-search--focus {
         box-shadow: 0 0 0 0.125em rgba(255, 165,0,.3);
         border-color:orange;
+    }
+    .face-input---custom-search .face-input-search-submit-submit--clicked:before {
+        border-color:rgba(255, 165,0,1);
     }
     </style>
     <div class="face-input-search face-input---custom-search ">
