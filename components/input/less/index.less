@@ -1,6 +1,7 @@
 @import "./settings.less";
 .@{face-input-prefix} {
     background-color:white;
+    position: relative;
 }
 .@{face-input-prefix}-inner {
     width: 100%;
@@ -19,7 +20,8 @@
             }
         }
     }
-.@{face-input-prefix}-input {
+.@{face-input-prefix}-input,
+.@{face-input-prefix}-textarea {
     width: 100%;
     position: relative;
     z-index: 2;
@@ -45,6 +47,27 @@
         border-color:@face-input-focus-border-color;
     }
 }
+
+    .@{face-input-prefix}--textarea-autosize {
+        .@{face-input-prefix}-textarea {
+            position: absolute;
+            z-index: 2;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            height: 100%;
+        }
+        .@{face-input-prefix}-asyncValue {
+            line-height: 1.8em;
+            padding: 0;
+            margin: 0;
+            white-space: pre;
+            word-spacing: normal;
+            word-break: normal;
+            word-wrap: normal;
+        }
+    }
 .@{face-input-prefix}--prepend {
     .@{face-input-prefix}-input {
         border-top-left-radius: 0;
