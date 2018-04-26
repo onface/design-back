@@ -82,18 +82,29 @@
     position: relative;
 }
 .@{face-input-prefix}-prepend-wrap {
-    display: block;
     margin-right: -1px;
-    line-height: @face-input-line-height;
-    background-color: @face-input-default-bg-color;
-    border:1px solid @face-input-border-color;
     border-top-left-radius: @face-input-border-radius;
     border-bottom-left-radius: @face-input-border-radius;
 }
-.@{face-input-prefix}-prepend-wrap-content {
+.@{face-input-prefix}-append-wrap {
+    margin-right: -1px;
+    border-top-right-radius: @face-input-border-radius;
+    border-bottom-right-radius: @face-input-border-radius;
+}
+
+.@{face-input-prefix}-prepend-wrap,
+.@{face-input-prefix}-append-wrap {
+    display: block;
+    line-height: @face-input-line-height;
+    background: #fafafa;;
+    border:1px solid @face-input-border-color;
+}
+.@{face-input-prefix}-prepend-wrap-content,
+.@{face-input-prefix}-append-wrap-content {
     padding-left: .4em;
     padding-right: .4em;
 }
+
 .@{face-input-prefix}--append {
     .@{face-input-prefix}-input {
         border-top-right-radius: 0;
@@ -108,14 +119,10 @@
     position: relative;
 }
 .@{face-input-prefix}-append-wrap {
-    display: block;
     margin-left: -1px;
-    line-height: @face-input-line-height;
-    background-color: @face-input-default-bg-color;
-    border:1px solid @face-input-border-color;
-    border-top-right-radius: @face-input-border-radius;
-    border-bottom-right-radius: @face-input-border-radius;
 }
+
+.@{face-input-prefix}-prepend-wrap-content
 .@{face-input-prefix}-append-wrap-content {
     padding-left: .4em;
     padding-right: .4em;
