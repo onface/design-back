@@ -11,7 +11,9 @@
     vertical-align: middle;
 }
     .@{face-input-prefix}--error {
-        .@{face-input-prefix}-input {
+        .@{face-input-prefix}-form-input,
+        .@{face-input-prefix}-form-textarea,
+        &.@{face-input-prefix}--full-outline {
             border-color:@face-input-error-color;
             &:focus{
                 outline: none;
@@ -19,13 +21,22 @@
                 border-color:@face-input-error-color;
             }
         }
+        &.@{face-input-prefix}--full-outline.@{face-input-prefix}--focus {
+            border-color:@face-input-error-color;
+            box-shadow: 0 0 0 0.125em lighten(@face-input-error-color, 35%);
+        }
+        &.@{face-input-prefix}--full-outline {
+            .@{face-input-prefix}-append-wrap,
+            .@{face-input-prefix}-prepend-wrap {
+                // border-color:@face-input-error-color;
+            }
+        }
     }
-.@{face-input-prefix}-input,
-.@{face-input-prefix}-textarea {
+.@{face-input-prefix}-form-input,
+.@{face-input-prefix}-form-textarea {
     width: 100%;
     position: relative;
     z-index: 2;
-    display: table-cell;
     border:1px solid @face-input-border-color;
     padding: 0;
     margin:0;
@@ -34,13 +45,11 @@
     border-radius: @face-input-border-radius;
     padding-left: @face-input-side-padding;
     padding-right: @face-input-side-padding;
-    background: transparent;
+    background: white;
     transition: box-shadow .3s;
     box-shadow:inset 0 1px 2px rgba(27,31,35,0.035);
     color:@face-input-text-color;
-    &::placeholder {
-        color: @face-input-placeholder-font-color;
-    }
+    resize:vertical;
     &:focus{
         outline: none;
         box-shadow: 0 0 0 0.125em @face-input-focus-color;
@@ -49,7 +58,7 @@
 }
 
     .@{face-input-prefix}--textarea-autosize {
-        .@{face-input-prefix}-textarea {
+        .@{face-input-prefix}-form-textarea {
             position: absolute;
             z-index: 2;
             top:0;
@@ -61,6 +70,8 @@
         .@{face-input-prefix}-asyncValue {
             line-height: 1.8em;
             padding: 0;
+            padding-left: @face-input-side-padding;
+            padding-right: @face-input-side-padding;
             margin: 0;
             white-space: pre;
             word-spacing: normal;
@@ -69,7 +80,7 @@
         }
     }
 .@{face-input-prefix}--prepend {
-    .@{face-input-prefix}-input {
+    .@{face-input-prefix}-form-input {
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
@@ -87,7 +98,7 @@
     border-bottom-left-radius: @face-input-border-radius;
 }
 .@{face-input-prefix}-append-wrap {
-    margin-right: -1px;
+    margin-left: -1px;
     border-top-right-radius: @face-input-border-radius;
     border-bottom-right-radius: @face-input-border-radius;
 }
@@ -106,7 +117,8 @@
 }
 
 .@{face-input-prefix}--append {
-    .@{face-input-prefix}-input {
+    .@{face-input-prefix}-form-textarea,
+    .@{face-input-prefix}-form-input {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
     }
@@ -137,7 +149,7 @@
     font-size: 0.8em;
 }
 .@{face-input-prefix}--append-ghost {
-    .@{face-input-prefix}-input {
+    .@{face-input-prefix}-form-input {
         padding-right: 0;
         border-right:none;
         border-top-right-radius: @face-input-border-radius;
@@ -150,7 +162,7 @@
 }
 
 .@{face-input-prefix}--prepend-ghost {
-    .@{face-input-prefix}-input {
+    .@{face-input-prefix}-form-input {
         padding-left: 0;
         border-left:none;
         border-top-left-radius: @face-input-border-radius;
@@ -165,7 +177,7 @@
     border:1px solid @face-input-border-color;
     border-radius: @face-input-border-radius;
 
-    .@{face-input-prefix}-input {
+    .@{face-input-prefix}-form-input {
         border: none;
     }
     .@{face-input-prefix}-prepend-wrap {
@@ -179,16 +191,32 @@
         border-bottom:none;
     }
 }
+html .@{face-input-prefix}--full-outline {
+    .@{face-input-prefix}-prepend-wrap {
+        margin-right: 0;
+    }
+    .@{face-input-prefix}-append-wrap {
+        margin-left: 0;
+    }
+    .@{face-input-prefix}-form-input {
+        transition: none;
+    }
+}
 html .@{face-input-prefix}--full-outline.@{face-input-prefix}--focus{
     border-color: @face-input-focus-border-color;
     box-shadow: 0 0 0 0.125em @face-input-focus-color;
-    .@{face-input-prefix}-input:focus{
+    .@{face-input-prefix}-form-input:focus{
         box-shadow: none;
         border:none;
     }
 }
-.@{face-input-prefix}--button {
-
+.@{face-input-prefix}--search {
+    .@{face-input-prefix}-form-input {
+        border-right:none;
+    }
+    .@{face-input-prefix}-form-textarea {
+        border-right:none;
+    }
     .@{face-input-prefix}-append-wrap {
         border: none;
         line-height: 1;
@@ -204,16 +232,16 @@ html .@{face-input-prefix}--full-outline.@{face-input-prefix}--focus{
         border-top-right-radius: 0px;
     }
 }
-.@{face-input-prefix}--button-ghost {
+.@{face-input-prefix}--search-ghost {
     .@{face-input-prefix}-append-wrap {
         background: transparent;
     }
-    .@{face-input-prefix}-append-wrap-content-btn {
+    .@{face-input-prefix}-append-wrap-content-search {
         background: transparent;
         box-shadow: none;
         color:@face-input-text-color;
     }
-    .@{face-input-prefix}-append-wrap-content-btn--clicked:before  {
+    .@{face-input-prefix}-append-wrap-content-search--clicked:before  {
         display: none;
     }
 }
@@ -227,22 +255,25 @@ html .@{face-input-prefix}--full-outline.@{face-input-prefix}--focus{
     border-width: 0.3em;
   }
 }
-.@{face-input-prefix}-append-wrap-content-btn {
+.@{face-input-prefix}-append-wrap-content-search {
+    position: relative;
+    z-index: 2;
     padding:0;
     border: none;
     outline: none;
     display: inline-block;
-    background-color: @face-input-btn--primary-color;
+    background-color: @face-input-primary-color;
+    // border: 1px solid @face-input-primary-color;
+    box-shadow: 0px 0px 0px 1px @face-input-primary-color;
     line-height: 1.8em;
     color:white;
     padding-left: .4em;
     padding-right: .4em;
-    box-shadow:0px 0px 0px 1px @face-input-btn--primary-color;
     border-top-right-radius: @face-input-border-radius;
     border-bottom-right-radius: @face-input-border-radius;
     cursor: pointer;
 }
-.@{face-input-prefix}-append-wrap-content-btn--clicked&:before {
+.@{face-input-prefix}-append-wrap-content-search--clicked&:before {
   content: '';
   position: absolute;
   top: -1px;
@@ -254,4 +285,59 @@ html .@{face-input-prefix}--full-outline.@{face-input-prefix}--focus{
   opacity: 0.5;
     animation: faceInputSearchShadowEffect .4s;
   display: block;
+}
+.@{face-input-prefix}-form {
+    position: relative;
+    display: table-cell;
+}
+.@{face-input-prefix}-form-input::placeholder,
+.@{face-input-prefix}-form-textarea::placeholder {
+    color: @face-input-placeholder-font-color;
+}
+.@{face-input-prefix}-form-placeholder {
+    pointer-events:auto;
+    color: @face-input-placeholder-font-color;
+    box-sizing: border-box;
+    position: absolute;
+    //给 textarea 的 resize 留位置
+    // left: @face-input-side-padding;
+    // right:@face-input-side-padding;
+    // top: 0;
+    // bottom:.2em;
+    left:0;top:0;bottom:0;right:0;
+    padding-left: @face-input-side-padding;
+    padding-right:@face-input-side-padding;
+    pointer-events: none;
+    z-index: 3;
+    // width: 100%;
+    // height: 100%;
+    overflow: hidden;
+    line-height: 1.8;
+    // padding-left: @face-input-side-padding;
+    // padding-right: @face-input-side-padding;
+    vertical-align: middle;
+    img {
+        vertical-align: middle;
+    }
+}
+.@{face-input-prefix}-group {
+    .@{face-input-prefix} {
+        display: inline-block;
+        width: 10em;
+        &:first-child {
+            .@{face-input-prefix}-form-input,
+            .@{face-input-prefix}-append-wrap {
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+        }
+        &:last-child {
+            margin-left: -1px;
+            .@{face-input-prefix}-form-input,
+            .@{face-input-prefix}-prepend-wrap {
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+    }
 }

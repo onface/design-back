@@ -13,19 +13,40 @@
 <body style="padding:20px;" >
     <div class="face-input">
         <div class="face-input-inner">
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
         </div>
     </div>
     <br />
     <div class="face-input">
         <div class="face-input-inner">
-            <textarea class="face-input-textarea" placeholder="请输入文字"></textarea>
+            <div class="face-input-form" >
+                <span class="face-input-form-placeholder">
+                    自定义提示文字
+                    <img width="15" src="https://avatars1.githubusercontent.com/u/20395258?s=200&v=4" alt="" />
+                </span>
+                <input class="face-input-form-input"/>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="face-input">
+        <div class="face-input-inner">
+            <div class="face-input-form" ><textarea class="face-input-form-textarea" placeholder="请输入文字"></textarea></div>
+        </div>
+    </div>
+    <br />
+    <div class="face-input">
+        <div class="face-input-inner">
+            <div class="face-input-form" >
+                <span class="face-input-form-placeholder">自定义<br />提示文字</span>
+                <textarea class="face-input-form-textarea"></textarea>
+            </div>
         </div>
     </div>
     <br />
     <div class="face-input face-input--textarea-autosize">
         <div class="face-input-inner">
-            <textarea class="face-input-textarea" placeholder="高度自适应"></textarea>
+            <textarea class="face-input-form-textarea" placeholder="高度自适应"></textarea>
             <div class="face-input-asyncValue" >1
                 2
                 3
@@ -39,7 +60,7 @@
     <br />
     <div class="face-input face-input--error">
         <div class="face-input-inner">
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
         </div>
     </div>
     <br />
@@ -52,7 +73,7 @@
                     </span>
                 </span>
             </span>
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
         </div>
     </div>
     <br />
@@ -65,11 +86,11 @@
                     </span>
                 </span>
             </span>
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
         </div>
     </div>
     <br />
-    <div class="face-input face-input--append face-input--prepend face-input--button face-input--full-outline">
+    <div class="face-input face-input--append face-input--prepend face-input--search face-input--full-outline">
         <div class="face-input-inner">
             <span class="face-input-prepend">
                 <span class="face-input-prepend-wrap">
@@ -78,11 +99,11 @@
                     </span>
                 </span>
             </span>
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
             <span class="face-input-append">
                 <span class="face-input-append-wrap">
                     <span class="face-input-append-wrap-content">
-                        <span class="face-input-append-wrap-content-btn">
+                        <span class="face-input-append-wrap-content-search">
                             <span class="fi fi-search"></span>
                         </span>
                     </span>
@@ -92,13 +113,13 @@
     </div>
     <br />
 
-    <div class="face-input face-input--append face-input--prepend face-input--button face-input--full-outline">
+    <div class="face-input face-input--append face-input--prepend face-input--search face-input--full-outline">
         <div class="face-input-inner">
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
             <span class="face-input-append">
                 <span class="face-input-append-wrap">
                     <span class="face-input-append-wrap-content">
-                        <span class="face-input-append-wrap-content-btn">
+                        <span class="face-input-append-wrap-content-search">
                             <span class="fi fi-search"></span>
                         </span>
                     </span>
@@ -107,13 +128,13 @@
         </div>
     </div>
     <br />
-    <div class="face-input face-input--append face-input--prepend face-input--button face-input--button-ghost face-input--full-outline">
+    <div class="face-input face-input--append face-input--prepend face-input--search face-input--search-ghost face-input--full-outline">
         <div class="face-input-inner">
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
             <span class="face-input-append">
                 <span class="face-input-append-wrap">
                     <span class="face-input-append-wrap-content">
-                        <button type="submit" class="face-input-append-wrap-content-btn">
+                        <button type="submit" class="face-input-append-wrap-content-search">
                             <span class="fi fi-search"></span>
                         </button>
                     </span>
@@ -124,7 +145,7 @@
     <br />
     <div class="face-input face-input--append">
         <div class="face-input-inner">
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
             <span class="face-input-append">
                 <span class="face-input-append-wrap">
                     <span class="face-input-append-wrap-content">
@@ -132,6 +153,26 @@
                     </span>
                 </span>
             </span>
+        </div>
+    </div>
+    <br />
+    <div class="face-input-group">
+        <div class="face-input face-input--append">
+            <div class="face-input-inner">
+                <div class="face-input-form" ><input class="face-input-form-input" value="mail" /></div>
+                <span class="face-input-append">
+                    <span class="face-input-append-wrap">
+                        <span class="face-input-append-wrap-content">
+                            @
+                        </span>
+                    </span>
+                </span>
+            </div>
+        </div><!--
+        --><div class="face-input">
+            <div class="face-input-inner">
+                <div class="face-input-form" ><input class="face-input-form-input" value="gamil.com" /></div>
+            </div>
         </div>
     </div>
     <br />
@@ -144,13 +185,13 @@
                     </span>
                 </span>
             </span>
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
         </div>
     </div>
     <br />
     <div class="face-input face-input--full-outline face-input--append face-input--append-ghost">
         <div class="face-input-inner">
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
             <span class="face-input-append">
                 <span class="face-input-append-wrap">
                     <span class="face-input-append-wrap-content">
@@ -170,7 +211,7 @@
                     </span>
                 </span>
             </span>
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
             <span class="face-input-append">
                 <span class="face-input-append-wrap">
                     <span class="face-input-append-wrap-content">
@@ -190,7 +231,7 @@
                     </span>
                 </span>
             </span>
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
             <span class="face-input-append">
                 <span class="face-input-append-wrap">
                     <span class="face-input-append-wrap-content">
@@ -212,10 +253,10 @@
         color:white;
         border:1px solid purple;
     }
-    .face-input---custom .face-input-input{
+    .face-input---custom .face-input-form-input{
         border:1px solid purple;
     }
-    .face-input---custom .face-input-input:focus {
+    .face-input---custom .face-input-form-input:focus {
         box-shadow: 0px 0px 0px 2px rgba(128,0,128,.2);
     }
     </style>
@@ -228,7 +269,7 @@
                     </span>
                 </span>
             </span>
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
             <span class="face-input-append">
                 <span class="face-input-append-wrap">
                     <span class="face-input-append-wrap-content">
@@ -248,7 +289,7 @@
                     </span>
                 </span>
             </span>
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
             <span class="face-input-append">
                 <span class="face-input-append-wrap">
                     <span class="face-input-append-wrap-content">
@@ -268,7 +309,7 @@
                     </span>
                 </span>
             </span>
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
             <span class="face-input-append">
                 <span class="face-input-append-wrap">
                     <span class="face-input-append-wrap-content">
@@ -288,7 +329,7 @@
                     </span>
                 </span>
             </span>
-            <input class="face-input-input" placeholder="请输入文字" />
+            <div class="face-input-form" ><input class="face-input-form-input" placeholder="请输入文字" /></div>
             <span class="face-input-append">
                 <span class="face-input-append-wrap">
                     <span class="face-input-append-wrap-content">
@@ -304,14 +345,14 @@
     <script src="https://unpkg.com/jquery@1.12.0/dist/jquery.min.js"></script>
     <script>
 $(function () {
-    $('.face-input-append-wrap-content-btn').on('click', function () {
+    $('.face-input-append-wrap-content-search').on('click', function () {
         var $this = $(this)
-        $this.addClass('face-input-append-wrap-content-btn--clicked')
+        $this.addClass('face-input-append-wrap-content-search--clicked')
         setTimeout(function () {
-            $this.removeClass('face-input-append-wrap-content-btn--clicked')
+            $this.removeClass('face-input-append-wrap-content-search--clicked')
         },300)
     })
-    $('.face-input-input').on('focus', function () {
+    $('.face-input-form-input').on('focus', function () {
         $(this).closest('.face-input').addClass('face-input--focus')
     }).on('blur', function () {
         $(this).closest('.face-input').removeClass('face-input--focus')
