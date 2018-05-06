@@ -2,8 +2,9 @@
     border:1px solid #ddd;
     border-radius: .2em;
     box-shadow: 0px .1em .3em rgba(11,11,11,.12);
+    background-color: white;
 }
-.face-dropdown-item {
+.face-dropdown-bd-item {
     position: relative;
     cursor: pointer;
     padding-left: .5em;
@@ -12,13 +13,58 @@
     color:#333;
     font-size: .9em;
     line-height:2.2;
+    border-bottom: 1px solid #eee;
+    &:last-child {
+        border-bottom:none;
+    }
     &:hover {
-        color:#2d8cf0;
+        background-color:#2d8cf0;
+        box-shadow: 0px 0px 0px 1px #2d8cf0;
+        color:white;
+        border-bottom-color:#2d8cf0;
     }
 }
-.face-dropdown-item-swtich {
+.face-dropdown-bd-item-swtich {
     position: absolute;
     width:1.4em;
     text-align: center;
     right:0;top:0;
+}
+.face-dropdown-hd {
+    border-bottom: 1px solid #e1e4e8;
+}
+.face-dropdown-foot {
+    border-top: 1px solid #e1e4e8;
+    text-align: right;
+}
+.face-dropdown-foot,
+.face-dropdown-hd {
+    position: relative;
+    font-size:1em;
+    display: block;
+    padding:.3em .5em;
+    background: #f6f8fa;
+    vertical-align: middle;
+}
+.face-dropdown-bd-item-check {
+    font-weight: bold;
+}
+.face-dropdown-bd-item-checkbox {
+
+}
+.face-dropdown-bd-item-check,
+.face-dropdown-bd-item-checkbox {
+    width: 1em;
+    text-align: center;
+}
+.face-dropdown-close {
+    position: absolute;
+    right:0;top:0;
+    padding:.3em;
+    cursor: pointer;
+    color:#c6cbd1;
+    font-weight: bold;
+    &:hover {
+        color: #d85c4b;
+    }
 }
