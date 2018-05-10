@@ -9,11 +9,66 @@
     <link rel="stylesheet" href="/face.less" />
     <link rel="stylesheet" href="/components/icons/index.less" />
     <link rel="stylesheet" href="/components/btn/index.less" />
+
+    <link rel="stylesheet" href="/components/checkbox/0.3.x.less/index.less" />    
+    <link rel="stylesheet" href="/components/radio/0.3.x.less/index.less" />    
 </head>
-<body style="padding:20px;" >
+<body style="padding:20px; line-height: 30px;" >
 
-	label
+	<h2>label</h2>
+    <div>default</div>
+        <label class="face-label">
+            <span class="face-label-cnt">前置default</span>
+            <span class="face-label-input">
+                <!-- checkbox 0.3.x -->
+                <span class="face-checkbox face-checkbox--focus face-checkbox--checked">
+                    <span class="face-checkbox-icon"></span>
+                    <input type="checkbox" class="face-checkbox-input" />
+                </span>                
+            </span>
+            <span class="face-label-cnt">后置default</span>
+        </label>
+        
+        <label class="face-label face-label--disabled">
+            <span class="face-label-cnt">前置disabled</span>
+            <span class="face-label-input">
+                <!-- checkbox 0.3.x -->
+                <span class="face-checkbox face-checkbox--checked face-checkbox--disabled">
+                    <span class="face-checkbox-icon"></span>
+                    <input type="checkbox" class="face-checkbox-input" />
+                </span>                
+            </span>
+            <span class="face-label-cnt">后置disabled</span>
+        </label>
+        
+        <hr/>
+        
+        <label class="face-label">
+            <span class="face-label-cnt">前置default</span>
+            <span class="face-label-input">
+                <!-- radio 0.3.x -->
+                <span class="face-radio face-radio--focus face-radio--checked">
+                    <span class="face-radio-icon"></span>
+                    <input type="radio" class="face-radio-input" />
+                </span>                
+            </span>
+            <span class="face-label-cnt">后置default</span>
+        </label>
+        
+        <label class="face-label face-label--disabled">
+            <span class="face-label-cnt">前置disabled</span>
+            <span class="face-label-input">
+                <!-- radio 0.3.x -->
+                <span class="face-radio face-radio--checked face-radio--disabled">
+                    <span class="face-radio-icon"></span>
+                    <input type="radio" class="face-radio-input" />
+                </span>                
+            </span>
+            <span class="face-label-cnt">后置disabled</span>
+        </label>
 
-	labelGroup
+
+    <hr/>
+	<h2>labelGroup(btn radio checkbox switch)</h2>
 </body>
 </html>
