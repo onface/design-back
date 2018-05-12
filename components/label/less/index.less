@@ -26,3 +26,134 @@
 		color: @face-label-text-disable-color;
 		cursor: not-allowed;
 	}
+
+
+
+
+
+
+
+
+.@{prefix}Group {
+    // display: inline-block;
+    display: flex;
+    display: inline-flex;
+    vertical-align: middle;
+    white-space: nowrap;
+    & + & {
+        margin-left: .625em;
+    }
+    .@{prefix} {
+        // align-items: flex-start;
+        display: inline-block;
+        border-radius: 0;
+        border: 1px solid #d9d9d9;
+        // padding-left: .3125em;
+        padding-left: 0.625em;
+        padding-right: 0.625em;
+        border-radius: 0;
+        line-height: 1.8em;
+        &:first-child {
+            border-radius: .18em 0 0 .18em;
+        }
+        &:last-child {
+            border-radius: 0 .18em .18em 0;
+        }
+        &:not(:first-child) {
+            margin: 0 0 0 -1px;
+        }
+        &:hover {
+            color: @face-label-active-color;
+        }
+    }
+
+
+	.@{prefix}--checked {
+		z-index: 1;
+        border-color: @face-label-active-color;
+            color: @face-label-active-color;
+	}
+	.@{prefix}--focus,
+    .@{prefix}--focus.@{prefix}--checked {
+        box-shadow: 0 0 0 .125em @face-label-shadow-active-color;
+        &:hover .@{prefix} ,
+        .@{prefix} {
+            box-shadow: none;
+        }
+    }
+    .@{prefix}--disabled.@{prefix}--checked {
+        background-color:@face-label-shadow-color;
+    }
+    .@{prefix}--disabled,
+    .@{prefix}--disabled.@{prefix}--checked {
+        z-index: 0;
+        border-color:@face-label-default-color;
+        color: @face-label-text-disable-color;
+        &:hover {
+        	color: @face-label-text-disable-color;
+        }
+    }
+}
+
+
+	.@{prefix}Group--separate {
+		.@{prefix} {
+            &,
+            &:first-child,
+            &:last-child {
+                border-radius: .18em;
+            }
+            &:not(:first-child) {
+                margin-left: .625em;
+            }
+        }
+	}
+    .@{prefix}Group--horiz {
+        display: inline-grid;
+        .@{prefix} {
+            &:first-child {
+                border-radius: .18em .18em 0 0;
+            }
+            &:last-child {
+                border-radius: 0 0 .18em .18em;
+            }
+            &:not(:first-child) {
+                margin: -1px 0 0 0 ;
+            }
+        }
+    }
+    .@{prefix}Group--separate.@{prefix}Group--horiz {
+        .@{prefix} {
+            &:first-child, 
+            &:last-child,
+            &:not(:first-child) {
+                border-radius: .18em;
+            }
+            &:not(:first-child) {
+                margin: .625em 0 0 0 ;
+            }
+        }
+    }
+    .@{prefix}Group--rimless {
+    	.@{prefix},
+    	.@{prefix}--focus,
+    	.@{prefix}--focus.@{prefix}--checked,
+    	.@{prefix}--disabled.@{prefix}--checked {
+    		border: none;
+    		box-shadow: none;
+    		background-color: transparent;
+    	}
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
