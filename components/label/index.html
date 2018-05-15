@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>label</title>
+    <link rel="stylesheet" href="./less/index.less">
+    <link rel="stylesheet" href="/face.less" />
+    <link rel="stylesheet" href="/components/icons/index.less" />
+    <link rel="stylesheet" href="/components/btn/index.less" />
+
+    <link rel="stylesheet" href="/components/checkbox/0.3.x.less/index.less" />    
+    <link rel="stylesheet" href="/components/radio/0.3.x.less/index.less" />    
+</head>
+<body style="padding:20px; line-height: 30px;" >
+
+	<h2>label</h2>
+    <div>default</div>
+        <label class="face-label">
+            <span class="face-label-cnt">前置default</span>
+            <span class="face-label-input">
+                <!-- checkbox 0.3.x -->
+                <span class="face-checkbox face-checkbox--focus face-checkbox--checked">
+                    <span class="face-checkbox-icon"></span>
+                    <input type="checkbox" class="face-checkbox-input" />
+                </span>                
+            </span>
+            <span class="face-label-cnt">后置default</span>
+        </label>
+        
+        <label class="face-label face-label--disabled">
+            <span class="face-label-cnt">前置disabled</span>
+            <span class="face-label-input">
+                <!-- checkbox 0.3.x -->
+                <span class="face-checkbox face-checkbox--checked face-checkbox--disabled">
+                    <span class="face-checkbox-icon"></span>
+                    <input type="checkbox" class="face-checkbox-input" />
+                </span>                
+            </span>
+            <span class="face-label-cnt">后置disabled</span>
+        </label>
+        
+        <hr/>
+        
+        <label class="face-label">
+            <span class="face-label-cnt">前置default</span>
+            <span class="face-label-input">
+                <!-- radio 0.3.x -->
+                <span class="face-radio face-radio--focus face-radio--checked">
+                    <span class="face-radio-icon"></span>
+                    <input type="radio" class="face-radio-input" />
+                </span>                
+            </span>
+            <span class="face-label-cnt">后置default</span>
+        </label>
+        
+        <label class="face-label face-label--disabled">
+            <span class="face-label-cnt">前置disabled</span>
+            <span class="face-label-input">
+                <!-- radio 0.3.x -->
+                <span class="face-radio face-radio--checked face-radio--disabled">
+                    <span class="face-radio-icon"></span>
+                    <input type="radio" class="face-radio-input" />
+                </span>                
+            </span>
+            <span class="face-label-cnt">后置disabled</span>
+        </label>
+
+
+    <hr/>
+	<h2>labelGroup(btn radio checkbox)</h2>
+    <div class="face-labelGroup">
+        <label class="face-label face-label--focus">
+            <span class="face-label-cnt">focus</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">focus</span>
+        </label>
+        <label class="face-label">
+            <span class="face-label-cnt">default</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">default</span>
+        </label>
+        <label class="face-label face-label--checked">
+            <span class="face-label-cnt">checked</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">checked</span>
+        </label>
+        <label class="face-label face-label--disabled face-label--checked">
+            <span class="face-label-cnt">disabled checked</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio face-radio--disabled face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled checked</span>
+        </label>
+        <label class="face-label face-label--disabled">
+            <span class="face-label-cnt">disabled</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio face-radio--disabled">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled</span>
+        </label>
+        <label class="face-label face-label--focus face-label--checked">
+            <span class="face-label-cnt">focus checked</span>
+            <!-- radio 0.3.x -->
+            <span class="face-checkbox face-checkbox--checked">
+                <span class="face-checkbox-icon"></span>
+                <input type="checkbox" class="face-checkbox-input" />
+            </span>
+            <span class="face-label-cnt">focus checked</span>
+        </label>
+    </div>
+
+    <h3>separate</h3>
+    <div class="face-labelGroup face-labelGroup--separate">
+        <label class="face-label face-label--focus">
+            <span class="face-label-cnt">focus</span>
+            <span class="face-radio">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">focus</span>
+        </label>
+        <label class="face-label">
+            <span class="face-label-cnt">default</span>
+            <span class="face-radio">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">default</span>
+        </label>
+        <label class="face-label face-label--checked">
+            <span class="face-label-cnt">checked</span>
+            <span class="face-radio face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">checked</span>
+        </label>
+        <label class="face-label face-label--disabled face-label--checked">
+            <span class="face-label-cnt">disabled checked</span>
+            <span class="face-radio face-radio--disabled face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled checked</span>
+        </label>
+        <label class="face-label face-label--disabled">
+            <span class="face-label-cnt">disabled</span>
+            <span class="face-radio face-radio--disabled">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled</span>
+        </label>
+        <label class="face-label face-label--focus face-label--checked">
+            <span class="face-label-cnt">focus checked</span>
+            <span class="face-radio face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">focus checked</span>
+        </label>
+    </div>
+
+
+    <h3>horiz</h3>
+    <div class="face-labelGroup face-labelGroup--horiz">
+        <label class="face-label face-label--focus">
+            <span class="face-label-cnt">focus</span>
+            <span class="face-radio">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">focus</span>
+        </label>
+        <label class="face-label">
+            <span class="face-label-cnt">default</span>
+            <span class="face-radio">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">default</span>
+        </label>
+        <label class="face-label face-label--checked">
+            <span class="face-label-cnt">checked</span>
+            <span class="face-radio face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">checked</span>
+        </label>
+        <label class="face-label face-label--disabled face-label--checked">
+            <span class="face-label-cnt">disabled checked</span>
+            <span class="face-radio face-radio--disabled face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled checked</span>
+        </label>
+        <label class="face-label face-label--disabled">
+            <span class="face-label-cnt">disabled</span>
+            <span class="face-radio face-radio--disabled">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled</span>
+        </label>
+        <label class="face-label face-label--focus face-label--checked">
+            <span class="face-label-cnt">focus checked</span>
+            <span class="face-radio face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">focus checked</span>
+        </label>
+    </div>
+
+    <h3>horiz separate</h3>
+    <div class="face-labelGroup face-labelGroup--horiz face-labelGroup--separate">
+        <label class="face-label face-label--focus">
+            <span class="face-label-cnt">focus</span>
+            <span class="face-radio">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">focus</span>
+        </label>
+        <label class="face-label">
+            <span class="face-label-cnt">default</span>
+            <span class="face-radio">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">default</span>
+        </label>
+        <label class="face-label face-label--checked">
+            <span class="face-label-cnt">checked</span>
+            <span class="face-radio face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">checked</span>
+        </label>
+        <label class="face-label face-label--disabled face-label--checked">
+            <span class="face-label-cnt">disabled checked</span>
+            <span class="face-radio face-radio--disabled face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled checked</span>
+        </label>
+        <label class="face-label face-label--disabled">
+            <span class="face-label-cnt">disabled</span>
+            <span class="face-radio face-radio--disabled">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled</span>
+        </label>
+        <label class="face-label face-label--focus face-label--checked">
+            <span class="face-label-cnt">focus checked</span>
+            <span class="face-radio face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">focus checked</span>
+        </label>
+    </div>
+
+    <h3>rimless</h3>
+    <div class="face-labelGroup face-labelGroup--rimless">
+        <label class="face-label face-label--focus">
+            <span class="face-label-cnt">focus</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio face-radio--focus">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">focus</span>
+        </label>
+        <label class="face-label">
+            <span class="face-label-cnt">default</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">default</span>
+        </label>
+        <label class="face-label face-label--checked">
+            <span class="face-label-cnt">checked</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">checked</span>
+        </label>
+        <label class="face-label face-label--disabled face-label--checked">
+            <span class="face-label-cnt">disabled checked</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio face-radio--disabled face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled checked</span>
+        </label>
+        <label class="face-label face-label--disabled">
+            <span class="face-label-cnt">disabled</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio face-radio--disabled">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled</span>
+        </label>
+        <label class="face-label face-label--focus face-label--checked">
+            <span class="face-label-cnt">focus checked</span>
+            <!-- radio 0.3.x -->
+            <span class="face-checkbox face-checkbox--focus face-checkbox--checked">
+                <span class="face-checkbox-icon"></span>
+                <input type="checkbox" class="face-checkbox-input" />
+            </span>
+            <span class="face-label-cnt">focus checked</span>
+        </label>
+    </div>
+
+    <h3>rimless horiz</h3>
+    <div class="face-labelGroup face-labelGroup--rimless face-labelGroup--horiz">
+        <label class="face-label face-label--focus">
+            <span class="face-label-cnt">focus</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio face-radio--focus">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">focus</span>
+        </label>
+        <label class="face-label">
+            <span class="face-label-cnt">default</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">default</span>
+        </label>
+        <label class="face-label face-label--checked">
+            <span class="face-label-cnt">checked</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">checked</span>
+        </label>
+        <label class="face-label face-label--disabled face-label--checked">
+            <span class="face-label-cnt">disabled checked</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio face-radio--disabled face-radio--checked">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled checked</span>
+        </label>
+        <label class="face-label face-label--disabled">
+            <span class="face-label-cnt">disabled</span>
+            <!-- radio 0.3.x -->
+            <span class="face-radio face-radio--disabled">
+                <span class="face-radio-icon"></span>
+                <input type="radio" class="face-radio-input" />
+            </span>
+            <span class="face-label-cnt">disabled</span>
+        </label>
+        <label class="face-label face-label--focus face-label--checked">
+            <span class="face-label-cnt">focus checked</span>
+            <!-- radio 0.3.x -->
+            <span class="face-checkbox face-checkbox--focus face-checkbox--checked">
+                <span class="face-checkbox-icon"></span>
+                <input type="checkbox" class="face-checkbox-input" />
+            </span>
+            <span class="face-label-cnt">focus checked</span>
+        </label>
+    </div>
+</body>
+</html>

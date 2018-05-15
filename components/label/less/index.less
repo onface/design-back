@@ -1,0 +1,36 @@
+@import "./settings.less";
+// @import "./extend.less";
+
+.@{prefix} {
+	color: @face-label-text-color;
+	cursor: pointer;
+}
+.@{prefix}-cnt {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1em;
+    line-height: 1.875em;
+}
+.@{prefix}-input {
+	display: inline-block;
+	&:after {
+        visibility:hidden;
+        display:block;
+        font-size:0;
+        content:" ";
+        clear:both;
+        height:0;
+    }
+}
+	.@{prefix}--disabled {
+		color: @face-label-text-disable-color;
+		cursor: not-allowed;
+	}
+
+
+
+
+
+
+
+@import './group.less';
