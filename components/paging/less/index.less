@@ -2,6 +2,7 @@
 .@{face-paging-prefix} {
     text-align: center;
     color: @face-paging-text-color;
+    line-height: @face-paging-line-height;
     a:hover {
         text-decoration: none;
     }
@@ -10,20 +11,20 @@
 @import "./solid.less";
 @import "./simple.less";
 @import "./group.less";
+@import "./full.less";
 
 .@{face-paging-prefix}-dataTotal {
     color:#666;
-    font-size: 0.8em;
     padding-right: 1em;
     padding-left: 1em;
 }
 .@{face-paging-prefix}-goto {
-    font-size: 0.8em;
     padding-left: 1em;
     padding-right: 1em;
 }
 .@{face-paging-prefix}-mini-value,
 .@{face-paging-prefix}-goto-value {
+    box-sizing: border-box;
     text-align: center;
     display: inline-block;
     border:1px solid #ccc;
@@ -48,19 +49,31 @@
 {
     min-width: 1em;
 }
-.@{face-paging-prefix} .@{face-paging-prefix}-prev--disabled,
-.@{face-paging-prefix} .@{face-paging-prefix}-next--disabled {
-    &,
-    &:hover {
-        color: @face-paging-disabled-text-color;
+
+.@{face-paging-prefix}--prev-disabled {
+    .@{face-paging-prefix}-prev {
+        &,
+        &:hover {
+            color: @face-paging-disabled-text-color;
+        }
+        cursor: not-allowed;
     }
-    cursor: not-allowed;
+}
+.@{face-paging-prefix}--next-disabled {
+    .@{face-paging-prefix}-next {
+        &,
+        &:hover {
+            color: @face-paging-disabled-text-color;
+        }
+        cursor: not-allowed;
+    }
 }
 .@{face-paging-prefix}-prev {
 
 }
-.@{face-paging-prefix}-prev-icon {
-
+.@{face-paging-prefix}-prev-icon,
+.@{face-paging-prefix}-next-icon {
+    transform: scale(.6);
 }
 .@{face-paging-prefix}-more {
     min-width: 1em;
@@ -91,13 +104,14 @@
 .@{face-paging-prefix}-item {
 
 }
-.@{face-paging-prefix}-next--disabled,
-.@{face-paging-prefix}-prev--disabled {
-    cursor: not-allowed;
-}
 .@{face-paging-prefix}-next {
 
 }
-.@{face-paging-prefix}-next-icon {
-
+.@{face-paging-prefix}-goto-submit {
+    // border:1px solid @face-paging-border-color;
+    background-color: white;
+    border-radius: .3em;
+    padding-left: .3em;
+    padding-right: .3em;
+    box-sizing: border-box;
 }

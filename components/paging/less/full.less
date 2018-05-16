@@ -1,0 +1,31 @@
+@import "./settings.less";
+.@{face-paging-prefix}--full  {
+    .@{face-paging-prefix}-dataTotal {
+        float: left;
+    }
+    .@{face-paging-prefix}-goto {
+        float: right;
+    }
+    .@{face-paging-prefix}-item,
+    .@{face-paging-prefix}-prev,
+    .@{face-paging-prefix}-next,
+    .@{face-paging-prefix}-more {
+        background-color:white;
+        position: relative;
+        border:1px solid @face-paging-border-color;
+        margin-left: -1px;
+        padding-left: .3em;
+        padding-right: .3em;
+        min-width: 1.2em;
+        display: inline-block;
+        color: @face-paging-text-color;
+        text-decoration: none;
+        margin-right: .15em;
+        margin-left: .15em;
+        &:hover {
+            z-index: 2;
+            color:@face-paging-primary-color;
+            border-color: @face-paging-primary-color;
+        }
+    }
+}
