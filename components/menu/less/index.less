@@ -1,0 +1,101 @@
+@import "./settings.less";
+.@{face-menu-prefix} {
+   border:1px solid @face-menu-borderColor;
+       border-radius: .2em;
+       box-shadow: 0px .1em .3em rgba(11,11,11,.12);
+   background-color: white;
+}
+.@{face-menu-prefix}-body-item {
+   position: relative;
+   cursor: pointer;
+   padding-left: .5em;
+   padding-right: .5em;
+   display: block;
+   color:@face-menu-item-color;
+   font-size: .9em;
+   line-height:@face-menu-item-lineHeight;
+   // border-bottom: 1px solid @face-menu-item-borderColor;
+   &:last-child {
+       // border-bottom:none;
+   }
+   &:hover {
+       background-color:@face-menu-item-hover-backgroundColor;
+       color:@face-menu-item-hover-color;
+   }
+}
+.@{face-menu-prefix}-body-item-swtich {
+   position: absolute;
+   width:1.4em;
+   text-align: center;
+   right:0;top:0;
+}
+.@{face-menu-prefix}-header {
+   border-bottom: 1px solid #e1e4e8;
+   border-top-left-radius: .2em;
+   border-top-right-radius: .2em;
+}
+.@{face-menu-prefix}-footer {
+   border-top: 1px solid #e1e4e8;
+   text-align: right;
+   border-bottom-left-radius: .2em;
+   border-bottom-right-radius: .2em;
+}
+.@{face-menu-prefix}-footer,
+.@{face-menu-prefix}-header {
+   position: relative;
+   font-size:1em;
+   display: block;
+   background-color: @face-menu-headerbody-backgroundColor;
+   vertical-align: middle;
+}
+.@{face-menu-prefix}-header {
+    padding:.5em .3em;
+}
+.@{face-menu-prefix}-footer {
+    padding:.3em;
+}
+.@{face-menu-prefix}-body {
+    overflow: auto;
+    display: block;
+}
+.@{face-menu-prefix}-body-item {
+    display: block;
+}
+.@{face-menu-prefix}-body-item-check {
+   font-weight: bold;
+}
+.@{face-menu-prefix}-body-item-checkbox {
+
+}
+.@{face-menu-prefix}-body-item-check,
+.@{face-menu-prefix}-body-item-checkbox {
+   width: 1em;
+   text-align: center;
+}
+.@{face-menu-prefix}-close {
+   position: absolute;
+   right:0;top:0;
+   line-height: 1.5;
+   padding:.3em;
+   cursor: pointer;
+   color:@face-menu-close-color;
+   font-weight: bold;
+   &:hover {
+       color: @face-menu-close-hover-color;
+   }
+}
+.@{face-menu-prefix}-body-empty,
+.@{face-menu-prefix}-body-loading {
+    display: block;
+    padding:1em;
+    text-align: center;
+    color: rgba(0,0,0,.6);
+}
+.@{face-menu-prefix}-body-empty-icon {
+    color:@face-menu-warning-color;
+    margin-left: -1em;
+}
+.@{face-menu-prefix}-body-loading-icon {
+    font-size: 1.5em;
+    color:@face-menu-loading-color;
+}

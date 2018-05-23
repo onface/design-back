@@ -1,0 +1,80 @@
+@import "./settings.less";
+.@{face-select-prefix} {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    border:1px solid @face-select-border-color;
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    line-height: @face-select-line-height;
+    border-radius: @face-select-border-radius;
+    padding-left: @face-select-left-padding;
+    padding-right: @face-select-right-padding;
+    background: white;
+    transition: box-shadow .3s;
+    color:@face-select-text-color;
+    resize:vertical;
+}
+.@{face-select-prefix}--multiple {
+    cursor: auto;
+}
+.@{face-select-prefix}--focus {
+    outline: none;
+    box-shadow: 0 0 0 0.125em @face-select-focus-color;
+    border-color:@face-select-focus-border-color;
+}
+.@{face-select-prefix}-view-value {
+    img {
+        vertical-align: middle;
+        margin-top: -.3em;
+    }
+}
+.@{face-select-prefix}-view-placeholder {
+    color:@face-select-placeholder-color;
+}
+.@{face-select-prefix}-switch {
+    position: absolute;
+    right: 0;
+    top:0;
+    cursor: pointer;
+    color:@face-select-switch-color;
+    opacity: .8;
+    vertical-align: top;
+    line-height: @face-select-line-height;
+    transform: scale(.8);
+    padding-right: .2em;
+    padding-left: .2em;
+}
+.@{face-select-prefix}-view-multiple {
+    word-wrap: break-word;
+    word-break: normal;
+}
+.@{face-select-prefix}-view-multiple-value {
+    display: inline-block;
+    background-color:#f4f4f4;
+    line-height: 1.4;
+    border-radius: @face-select-border-radius;
+    padding-left: .3em;
+    padding-right: .3em;
+    margin-right: .3em;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.@{face-select-prefix}-view-multiple-value-name {
+
+}
+.@{face-select-prefix}-view-multiple-value-close {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    font-size: .6em;
+    vertical-align: middle;
+    margin-top: -.3em;
+    text-shadow: 1px 1px 0px white;
+    &:hover {
+        color: @face-select-danger-color;
+    }
+}
