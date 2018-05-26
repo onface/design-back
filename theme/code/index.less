@@ -57,6 +57,7 @@
     position: absolute;
     top:1em;right:.5em;
 }
+
 html .face-one-code-source-tool-preview,
 html .face-one-code-source-tool-copy {
     transition: color .3s;
@@ -72,7 +73,20 @@ html .face-one-code-source-tool-copy {
     .face-one-code--open .face-one-code-source {
     display: block;
 }
-.face-one-code--horiz {
+.face-one-code-source-tool-preview {
+    display: inline-block;
+}
+.face-one-code-source-tool-preview-submit {
+    font-size: 1.2em;
+    -webkit-appearance:none;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    color: inherit;
+}
+.face-one-code--size {
     position: relative;
     &:after {
         content: ' ';
@@ -122,7 +136,7 @@ html .face-one-code-source-tool-copy {
     .face-one-code-info-switchCode {
         font-size: 1.2em;
     }
-    .face-one-code--horiz {
+    .face-one-code--size {
         .face-one-code-info-switchCode {
             width: 100%;
             position: static;
@@ -137,10 +151,51 @@ html .face-one-code-source-tool-copy {
             position: static;
         }
     }
-    html .face-one-code--horiz.face-one-code--open {
+    html .face-one-code--size.face-one-code--open {
         .face-one-code-source {
             display: block;
         }
     }
 
+}
+
+.face-one-readmedemo {
+    text-align: center;
+    margin-bottom: 1em;
+}
+.face-one-readmedemo-node {
+    position: relative;
+    min-width:19em;
+    min-height: 5em;
+    display: inline-block;
+    text-align: left;
+    border:1px dotted rgb(242, 242, 242);
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    border-bottom-left-radius: .4em;
+    border-bottom-right-radius: .4em;
+    /* box-shadow: 0px 0px .3em rgba(151,151,151,.1); */
+}
+.face-one-readmedemo-node-render {
+    padding: .5em;
+}
+.face-one-readmedemo {
+    text-align: center;
+    margin-bottom: 1em;
+}
+.face-one-readmedemo-node {
+    position: relative;
+    min-width:19em;
+    min-height: 5em;
+    display: inline-block;
+    text-align: left;
+    border:1px dotted rgb(242, 242, 242);
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+    border-bottom-left-radius: .4em;
+    border-bottom-right-radius: .4em;
+    /* box-shadow: 0px 0px .3em rgba(151,151,151,.1); */
+}
+.face-one-readmedemo-node-render {
+    padding: .5em;
 }
