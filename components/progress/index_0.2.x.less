@@ -1,0 +1,150 @@
+/** settings **/
+@prefix: face-progress;
+@face-progress-mark-color: #f5f5f5;
+
+@face-progress-bar-default-color: #4387fd;
+@face-progress-bar-success-color: #5dc75d;
+@face-progress-bar-error-color: #d85c4b;
+@face-progress-bar-warn-color: #ff8c00;
+
+@face-progress-text-color: rgba(0, 0, 0, 0.55);
+
+
+/** index **/
+.@{prefix} {
+	position: relative;
+	text-align: center;
+}
+	.@{prefix}--loading {
+		.@{prefix}-track-bar {
+			@keyframes smooth {
+	            0% { opacity:0.4;width:0 }
+	            to { opacity:0;width:100% }
+	        }
+	        &:before {
+	            transition: all .2s linear;
+	            content: "";
+	            opacity: 0;
+	            position: absolute;
+	            top: 0; left: 0; right: 0; bottom: 0;
+	            background: #fff;
+	            border-radius: 10px;
+	            animation: smooth 2s ease-in-out infinite;
+	        }
+		}
+	}
+	.@{prefix}--success {
+		.@{prefix}-track-bar {
+			background-color: @face-progress-bar-success-color;
+		}
+		.@{prefix}-circle-svg-bar {
+			stroke: @face-progress-bar-success-color;
+		}
+		.@{prefix}-F-text {
+			color: @face-progress-bar-success-color;
+		}
+	}
+	.@{prefix}--error {
+		.@{prefix}-track-bar {
+			background-color: @face-progress-bar-error-color;
+		}
+		.@{prefix}-circle-svg-bar {
+			stroke: @face-progress-bar-error-color;
+		}
+		.@{prefix}-F-text {
+			color: @face-progress-bar-error-color;
+		}
+	}
+	.@{prefix}--warn {
+		.@{prefix}-track-bar {
+			background-color: @face-progress-bar-warn-color;
+		}
+		.@{prefix}-circle-svg-bar {
+			stroke: @face-progress-bar-warn-color;
+		}
+		.@{prefix}-F-text {
+			color: @face-progress-bar-warn-color;
+		}
+	}
+.@{prefix}-F-text {
+	color: @face-progress-text-color;
+	font-size: 14px;  // em
+}
+.@{prefix}-F-text--inset {
+	position: absolute;
+	width: 100%;
+    margin: auto;
+    line-height: 1;
+	z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+/* line */
+.@{prefix}-line {
+	position: relative;
+	// display: flex;
+	// display: grid;
+}
+.@{prefix}-track {
+	position: relative;
+    width: 100%;
+    height: 6px; // 0.375em; 
+    margin: auto;
+    border-radius: 3px; // 0.1875em; 
+    background-color: @face-progress-mark-color;
+}
+.@{prefix}-track-bar {
+	position: absolute;
+	height: 100%;
+	border-radius: inherit;
+	transition: all .3s ease-in-out;
+    background-color: @face-progress-bar-default-color;
+}
+
+/* line group */
+
+/* circle */
+.@{prefix}-circle {
+    line-height: 0; // 消除下边间隔
+    position: relative;
+    .@{prefix}-F-text {
+    	font-size:  1.714285em; // 24px;
+	    display: table;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+    }
+}
+.@{prefix}-circle-svg {
+}
+.@{prefix}-circle-svg-track,
+.@{prefix}-circle-svg-bar {
+    stroke-linecap: round ;
+    stroke-width: 6px ;
+    fill-opacity: 0 ;
+    stroke-dasharray: 295.3097094374406px, 295.3097094374406px;
+	d:path("M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94");
+    transition: all .3s ease-in-out;
+}
+.@{prefix}-circle-svg-track {
+    stroke: @face-progress-mark-color;
+    stroke-dashoffset: 0px;
+}
+.@{prefix}-circle-svg-bar {
+    stroke: @face-progress-bar-default-color;
+    stroke-dashoffset: 295.3097094374406px;
+}
+	.@{prefix}-circle--dashboard {
+	    .@{prefix}-circle-svg {
+	        transform:rotate(225deg);
+	    }
+	    .@{prefix}-circle-svg-bar {
+	        stroke-dashoffset: 221.48228207808043px;
+	    }
+	    .@{prefix}-circle-svg-track, 
+	    .@{prefix}-circle-svg-bar {
+	        stroke-dasharray: 221.48228207808043px, 295.3097094374406px;
+	    }
+	}
