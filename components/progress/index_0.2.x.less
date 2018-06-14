@@ -14,61 +14,13 @@
 .@{prefix} {
 	position: relative;
 	text-align: center;
+     width: 100%;
+	// display: flex;
 }
-	.@{prefix}--loading {
-		.@{prefix}-track-bar {
-			@keyframes smooth {
-	            0% { opacity:0.4;width:0 }
-	            to { opacity:0;width:100% }
-	        }
-	        &:before {
-	            transition: all .2s linear;
-	            content: "";
-	            opacity: 0;
-	            position: absolute;
-	            top: 0; left: 0; right: 0; bottom: 0;
-	            background: #fff;
-	            border-radius: 10px;
-	            animation: smooth 2s ease-in-out infinite;
-	        }
-		}
-	}
-	.@{prefix}--success {
-		.@{prefix}-track-bar {
-			background-color: @face-progress-bar-success-color;
-		}
-		.@{prefix}-circle-svg-bar {
-			stroke: @face-progress-bar-success-color;
-		}
-		.@{prefix}-F-text {
-			color: @face-progress-bar-success-color;
-		}
-	}
-	.@{prefix}--error {
-		.@{prefix}-track-bar {
-			background-color: @face-progress-bar-error-color;
-		}
-		.@{prefix}-circle-svg-bar {
-			stroke: @face-progress-bar-error-color;
-		}
-		.@{prefix}-F-text {
-			color: @face-progress-bar-error-color;
-		}
-	}
-	.@{prefix}--warn {
-		.@{prefix}-track-bar {
-			background-color: @face-progress-bar-warn-color;
-		}
-		.@{prefix}-circle-svg-bar {
-			stroke: @face-progress-bar-warn-color;
-		}
-		.@{prefix}-F-text {
-			color: @face-progress-bar-warn-color;
-		}
-	}
 .@{prefix}-F-text {
 	color: @face-progress-text-color;
 	font-size: 14px;  // em
+	margin: auto;
 }
 .@{prefix}-F-text--inset {
 	position: absolute;
@@ -83,15 +35,17 @@
 /* line */
 .@{prefix}-line {
 	position: relative;
+	width: 100%;
+	margin: auto;
+	box-sizing: border-box;
 	// display: flex;
-	// display: grid;
 }
 .@{prefix}-track {
 	position: relative;
     width: 100%;
     height: 6px; // 0.375em; 
     margin: auto;
-    border-radius: 3px; // 0.1875em; 
+    border-radius: 9999px; 
     background-color: @face-progress-mark-color;
 }
 .@{prefix}-track-bar {
@@ -103,13 +57,24 @@
 }
 
 /* line group */
+.@{prefix}Group {
+	position: relative;
+	.@{prefix}:not(:first-child){
+		position: absolute;
+		top: 0;
+		.@{prefix}-track {
+			background-color: transparent;
+		}
+	}
+}
 
 /* circle */
 .@{prefix}-circle {
     line-height: 0; // 消除下边间隔
     position: relative;
+    width: 100%;
     .@{prefix}-F-text {
-    	font-size:  1.714285em; // 24px;
+    	font-size:  1.5em; // 24px;
 	    display: table;
 	    top: 0;
 	    left: 0;
@@ -136,15 +101,75 @@
     stroke: @face-progress-bar-default-color;
     stroke-dashoffset: 295.3097094374406px;
 }
-	.@{prefix}-circle--dashboard {
-	    .@{prefix}-circle-svg {
-	        transform:rotate(225deg);
-	    }
-	    .@{prefix}-circle-svg-bar {
-	        stroke-dashoffset: 221.48228207808043px;
-	    }
-	    .@{prefix}-circle-svg-track, 
-	    .@{prefix}-circle-svg-bar {
-	        stroke-dasharray: 221.48228207808043px, 295.3097094374406px;
-	    }
+
+
+/** themes **/	
+.@{prefix}--themes-success {
+	.@{prefix}-track-bar {
+		background-color: @face-progress-bar-success-color;
 	}
+	.@{prefix}-circle-svg-bar {
+		stroke: @face-progress-bar-success-color;
+	}
+	.@{prefix}-circle {
+		.@{prefix}-F-text {
+			color: @face-progress-bar-success-color;
+		}
+	}
+}
+.@{prefix}--themes-error {
+	.@{prefix}-track-bar {
+		background-color: @face-progress-bar-error-color;
+	}
+	.@{prefix}-circle-svg-bar {
+		stroke: @face-progress-bar-error-color;
+	}
+	.@{prefix}-circle {
+		.@{prefix}-F-text {
+			color: @face-progress-bar-error-color;
+		}
+	}
+}
+.@{prefix}--themes-warn {
+	.@{prefix}-track-bar {
+		background-color: @face-progress-bar-warn-color;
+	}
+	.@{prefix}-circle-svg-bar {
+		stroke: @face-progress-bar-warn-color;
+	}
+	.@{prefix}-circle {
+		.@{prefix}-F-text {
+			color: @face-progress-bar-warn-color;
+		}
+	}
+}
+.@{prefix}--themes-loading {
+	.@{prefix}-track-bar {
+		@keyframes smooth {
+            0% { opacity:0.4;width:0 }
+            to { opacity:0;width:100% }
+        }
+        &:before {
+            transition: all .2s linear;
+            content: "";
+            opacity: 0;
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: #fff;
+            border-radius: 10px;
+            animation: smooth 2s ease-in-out infinite;
+        }
+	}
+}
+.@{prefix}--themes-dashboard {
+    .@{prefix}-circle-svg {
+        transform:rotate(225deg);
+    }
+    .@{prefix}-circle-svg-bar {
+        stroke-dashoffset: 221.48228207808043px;
+    }
+    .@{prefix}-circle-svg-track, 
+    .@{prefix}-circle-svg-bar {
+        stroke-dasharray: 221.48228207808043px, 295.3097094374406px;
+    }
+}
