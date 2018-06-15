@@ -58,15 +58,20 @@
 
 /* line group */
 .@{prefix}Group {
-	position: relative;
-	.@{prefix}:not(:first-child){
-		position: absolute;
-		top: 0;
-		.@{prefix}-track {
-			background-color: transparent;
-		}
+	.@{prefix} {
+		margin-bottom: .5em;
 	}
 }
+	.@{prefix}Group--themes-lap {
+		position: relative;
+		.@{prefix}:not(:first-child){
+			position: absolute;
+			top: 0;
+			.@{prefix}-track {
+				background-color: transparent;
+			}
+		}
+	}
 
 /* circle */
 .@{prefix}-circle {
