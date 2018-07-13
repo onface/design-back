@@ -1,0 +1,90 @@
+@import './settings.less';
+
+.@{prefix} {
+	position: relative;
+	text-align: center;
+     width: 100%;
+	// display: flex;
+}
+	.@{prefix}-F-text {
+		color: @face-progress-text-color;
+		font-size: 14px;  // em
+		margin: auto;
+	}
+	.@{prefix}-F-text--inset {
+		position: absolute;
+		width: 100%;
+	    margin: auto;
+	    line-height: 1;
+		z-index: 1;
+	    top: 0;
+	    left: 0;
+	}
+
+/* line */
+.@{prefix}-line {
+	position: relative;
+	width: 100%;
+	margin: auto;
+	box-sizing: border-box;
+	// display: flex;
+}
+.@{prefix}-track {
+	position: relative;
+    width: 100%;
+    height: 6px; // 0.375em; 
+    margin: auto;
+    border-radius: 9999px; 
+    background-color: @face-progress-mark-color;
+}
+.@{prefix}-track-bar {
+	position: absolute;
+	height: 100%;
+	border-radius: inherit;
+	transition: all .3s ease-in-out;
+    background-color: @face-progress-bar-default-color;
+}
+
+/* line group */
+.@{prefix}Group {
+	.@{prefix} {
+		margin-bottom: .5em;
+	}
+}
+
+/* circle */
+.@{prefix}-circle {
+    line-height: 0; // 消除下边间隔
+    position: relative;
+    width: 100%;
+    .@{prefix}-F-text {
+    	font-size:  1.5em; // 24px;
+	    display: table;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+    }
+}
+.@{prefix}-circle-svg {
+}
+.@{prefix}-circle-svg-track,
+.@{prefix}-circle-svg-bar {
+    stroke-linecap: round ;
+    stroke-width: 6px ;
+    fill-opacity: 0 ;
+    stroke-dasharray: 295.3097094374406px, 295.3097094374406px;
+	d:path("M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94");
+    transition: all .3s ease-in-out;
+}
+.@{prefix}-circle-svg-track {
+    stroke: @face-progress-mark-color;
+    stroke-dashoffset: 0px;
+}
+.@{prefix}-circle-svg-bar {
+    stroke: @face-progress-bar-default-color;
+    stroke-dashoffset: 295.3097094374406px;
+}
+
+
+@import './style.less';

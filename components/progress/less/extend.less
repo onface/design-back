@@ -1,0 +1,62 @@
+@import './settings.less';
+
+
+.faceProgressStyle(@textColor, @strackColor, @barColor) {
+	.@{prefix}-F-text {
+		color: @textColor;
+	}
+	.@{prefix}-track {
+		background-color: @strackColor;
+	}
+	.@{prefix}-track-bar {
+		background-color: @barColor;
+	}
+	.@{prefix}-circle-svg-track {
+		stroke: @strackColor;
+	}
+	.@{prefix}-circle-svg-bar {
+		stroke: @barColor;
+	}
+
+
+
+	&.@{prefix}--themes-success {
+		.@{prefix}-track-bar {
+			background-color: @face-progress-bar-success-color;
+		}
+		.@{prefix}-circle-svg-bar {
+			stroke: @face-progress-bar-success-color;
+		}
+		.@{prefix}-circle {
+			.@{prefix}-F-text {
+				color: @face-progress-bar-success-color;
+			}
+		}
+	}
+	&.@{prefix}--themes-error {
+		.@{prefix}-track-bar {
+			background-color: @face-progress-bar-error-color;
+		}
+		.@{prefix}-circle-svg-bar {
+			stroke: @face-progress-bar-error-color;
+		}
+		.@{prefix}-circle {
+			.@{prefix}-F-text {
+				color: @face-progress-bar-error-color;
+			}
+		}
+	}
+	&.@{prefix}--themes-warn {
+		.@{prefix}-track-bar {
+			background-color: @face-progress-bar-warn-color;
+		}
+		.@{prefix}-circle-svg-bar {
+			stroke: @face-progress-bar-warn-color;
+		}
+		.@{prefix}-circle {
+			.@{prefix}-F-text {
+				color: @face-progress-bar-warn-color;
+			}
+		}
+	}
+}
