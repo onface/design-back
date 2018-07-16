@@ -29,6 +29,28 @@
             }
         }
     }
+    &.@{prefix}--focus,
+    &.@{prefix}--focus.@{prefix}--checked {
+        &:hover .@{prefix}-icon ,
+        .@{prefix}-icon {
+            box-shadow: 0 0 0 0.125em @face-checkbox-shadow-active-color;
+        }
+    }
+}
+
+.@{prefix}--themes-exist {
+    .@{prefix}-icon {
+        background-color:@face-checkbox-active-color;
+        border-color: @face-checkbox-active-color;
+        box-shadow: none;
+    }
+    &.@{prefix}--focus,
+    &.@{prefix}--focus.@{prefix}--checked {
+        &:hover .@{prefix}-icon ,
+        .@{prefix}-icon {
+            box-shadow: 0 0 0 0.125em @face-checkbox-shadow-active-color;
+        }
+    }
 }
 
 /* themes green (start) */
