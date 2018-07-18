@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>progress</title>
+    <link rel="stylesheet" href="./less/index.less">
+    <link rel="stylesheet" href="/face.less" />
+    <link rel="stylesheet" href="/components/icons/index.less" />
+    <link rel="stylesheet" href="/components/btn/index.less" />
+</head>
+<body style="padding:20px;" >
+	<h2>line</h2>
+	<div style="width:400px;font-size: 16px;">
+		<div class="face-progress-line">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:60%"></div>
+				</div>
+			</div>
+			<div class="face-progress-line-info">60.00%</div>
+		</div>
+		<div class="face-progress-line face-progress-line--loading">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:60%"></div>
+				</div>
+			</div>
+			<div class="face-progress-line-info">60.00%</div>
+		</div>
+		<div class="face-progress-line face-progress-line--error">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:40%"></div>
+				</div>
+			</div>
+			<div class="face-progress-line-info">
+				<span class="fi fi-close-of"></span> 失败
+			</div>
+		</div>
+		<div class="face-progress-line face-progress-line--success">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:80%"></div>
+				</div>
+			</div>
+			<div class="face-progress-line-info">
+				<span class="fi fi-check-of"></span>
+			</div>
+		</div>
+		<div class="face-progress-line">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:80%"></div>
+				</div>
+			</div>
+			<!-- <div class="face-progress-line-info">80.00%</div> -->
+		</div>
+		<div class="face-progress-line">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:60%"></div>
+					<div class="face-progress-line-box-track-bar" style="width:30%;background: darkorange"></div>
+				</div>
+			</div>
+			<div class="face-progress-line-info">30/60%</div>
+		</div>
+	</div>
+	<h2>thick (to inset text)</h2>
+	<div style="width:400px;font-size: 16px;">
+		<div class="face-progress-line face-progress-line--thick">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:0%">
+						<span class="face-progress-line-box-track-bar-text">00.00%</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="face-progress-line face-progress-line--thick">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:60%">
+						<span class="face-progress-line-box-track-bar-text">60.00%</span>
+					</div>
+				</div>
+			</div>
+			<div class="face-progress-line-info">60.00%</div>
+		</div>
+		<div class="face-progress-line face-progress-line--thick face-progress-line--loading">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:60%">
+						<span class="face-progress-line-box-track-bar-text">60.00%</span>
+					</div>
+				</div>
+			</div>
+			<div class="face-progress-line-info">60.00%</div>
+		</div>
+		<div class="face-progress-line face-progress-line--thick  face-progress-line--success">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:60%">
+						<span class="face-progress-line-box-track-bar-text">60.00%</span>
+					</div>
+				</div>
+			</div>
+			<div class="face-progress-line-info">
+				<span class="fi fi-check-of"></span>
+			</div>
+		</div>
+		<div class="face-progress-line face-progress-line--thick  face-progress-line--error">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:60%">
+						<span class="face-progress-line-box-track-bar-text">60.00%</span>
+					</div>
+				</div>
+			</div>
+			<div class="face-progress-line-info">
+				<span class="fi fi-close-of"></span> 失败
+			</div>
+		</div>
+		<div class="face-progress-line face-progress-line--thick">
+			<div class="face-progress-line-box">
+				<div class="face-progress-line-box-track">
+					<div class="face-progress-line-box-track-bar" style="width:60%">
+						<span class="face-progress-line-box-track-bar-text">60.00%</span>
+					</div>
+					<div class="face-progress-line-box-track-bar" style="width:30%;background: darkorange">
+						<span class="face-progress-line-box-track-bar-text">30.00%</span>
+					</div>
+				</div>
+			</div>
+			<div class="face-progress-line-info">30/60%</div>
+		</div>
+	</div>
+	<h2>circle</h2>
+	<div style="width:100px;font-size: 16px;">
+		<div class="face-progress-circle">
+			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+					    style="stroke-opacity:0"
+			    ></path>
+			</svg>
+			<div class="face-progress-circle-info">0%</div>
+		</div>
+		<div class="face-progress-circle">
+			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+					    style="stroke-dashoffset:100px"
+			    ></path>
+			</svg>
+			<div class="face-progress-circle-info">55%</div>
+		</div>
+		<div class="face-progress-circle face-progress-circle--success">
+			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+					    style="stroke-dashoffset:100px"
+			    ></path>
+			</svg>
+			<div class="face-progress-circle-info">
+				<span class="fi fi-check-of"></span>
+			</div>
+		</div>
+		<div class="face-progress-circle face-progress-circle--error">
+			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+					    style="stroke-dashoffset:100px"
+			    ></path>
+			</svg>
+			<div class="face-progress-circle-info">
+				<span class="fi fi-close-of"></span>
+			</div>
+		</div>
+		<div class="face-progress-circle face-progress-circle--dashboard">
+			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+					    style="stroke-dashoffset:100px"
+			    ></path>
+			</svg>
+			<div class="face-progress-circle-info">仪表盘</div>
+		</div>
+	</div>
+	<div style="width:200px;font-size: 32px;">
+		<div class="face-progress-circle">
+			<svg viewBox="0 0 100 100" class="face-progress-circle-svg">
+				<path class="face-progress-circle-svg-outer" 
+						d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94"
+				></path>
+			    <path class="face-progress-circle-svg-inner" 
+					    d="M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94" 
+					    style="stroke-dashoffset:100px"
+			    ></path>
+			</svg>
+			<div class="face-progress-circle-info">55.55%</div>
+		</div>
+	</div>
+</body>
+</html>

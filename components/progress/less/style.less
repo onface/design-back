@@ -1,19 +1,49 @@
-@import "./settings.less";
-@import "./extend.less";
+@import './settings.less';
+@import './extend.less';
 
-.@{prefix}-line--thick {
-    .@{prefix}-line-box {
-        padding-top: 0;
-        padding-bottom: 0;
-    }
-    .@{prefix}-line-box-track {
-        height: 1em;
-        border-radius: 0.5em;
-    }
+/** themes **/	
+.@{prefix}--themes-success {
+	.@{prefix}-track-bar {
+		background-color: @face-progress-bar-success-color;
+	}
+	.@{prefix}-circle-svg-bar {
+		stroke: @face-progress-bar-success-color;
+	}
+	.@{prefix}-circle {
+		.@{prefix}-F-text {
+			color: @face-progress-bar-success-color;
+		}
+	}
 }
-.@{prefix}-line--loading {
-    .@{prefix}-line-box-track-bar {
-        @keyframes smooth {
+.@{prefix}--themes-error {
+	.@{prefix}-track-bar {
+		background-color: @face-progress-bar-error-color;
+	}
+	.@{prefix}-circle-svg-bar {
+		stroke: @face-progress-bar-error-color;
+	}
+	.@{prefix}-circle {
+		.@{prefix}-F-text {
+			color: @face-progress-bar-error-color;
+		}
+	}
+}
+.@{prefix}--themes-warn {
+	.@{prefix}-track-bar {
+		background-color: @face-progress-bar-warn-color;
+	}
+	.@{prefix}-circle-svg-bar {
+		stroke: @face-progress-bar-warn-color;
+	}
+	.@{prefix}-circle {
+		.@{prefix}-F-text {
+			color: @face-progress-bar-warn-color;
+		}
+	}
+}
+.@{prefix}--themes-loading {
+	.@{prefix}-track-bar {
+		@keyframes smooth {
             0% { opacity:0.4;width:0 }
             to { opacity:0;width:100% }
         }
@@ -24,64 +54,45 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
             background: #fff;
-            border-radius: 10px;
+            border-radius: 999999px;
             animation: smooth 2s ease-in-out infinite;
         }
-    }
+	}
 }
-
-.@{prefix}-circle--dashboard {
+.@{prefix}--themes-dashboard {
     .@{prefix}-circle-svg {
         transform:rotate(225deg);
     }
-    .@{prefix}-circle-svg-inner {
+    .@{prefix}-circle-svg-bar {
         stroke-dashoffset: 221.48228207808043px;
     }
-    .@{prefix}-circle-svg-outer ,
-    .@{prefix}-circle-svg-inner {
+    .@{prefix}-circle-svg-track, 
+    .@{prefix}-circle-svg-bar {
         stroke-dasharray: 221.48228207808043px, 295.3097094374406px;
     }
 }
 
-// stauts
-
-.@{prefix}-line--error {
-	.faceProgressLineStyle(@face-progress-error-color);
-
-    .@{prefix}-line-box-track-bar {
-        &:nth-child(3n + 2) {
-            background-color: @face-progress-success-color;
-        }
-        &:nth-child(3n + 3) {
-            background-color: @face-progress-primary-color;
-        }
-    }
-}
-.@{prefix}-line--success {
-	.faceProgressLineStyle(@face-progress-success-color);
-
-    .@{prefix}-line-box-track-bar {
-        &:nth-child(3n + 2) {
-            background-color: @face-progress-error-color;
-        }
-        &:nth-child(3n + 3) {
-            background-color: @face-progress-primary-color;
-        }
-    }
-}
-.@{prefix}-circle--success {
-    .faceProgressCircleStyle(@face-progress-success-color);
-}
-.@{prefix}-circle--error {
-    .faceProgressCircleStyle(@face-progress-error-color);
+.@{prefix}Group--themes-lap {
+	position: relative;
+	.@{prefix}:not(:first-child){
+		position: absolute;
+		top: 0;
+		.@{prefix}-track {
+			background-color: transparent;
+		}
+	}
 }
 
 
-// dark
 
-// .@{prefix}-line--dark {
-//     .faceProgressLineStyle(@face-progress-dark-color)
-// }
-// .@{prefix}-circle--dark {
-//     .faceProgressCircleStyle(@face-progress-dark-color)
-// }
+
+
+
+/* custom themes */
+.@{prefix}--themes-customPurple {
+	.faceProgressStyle(
+		@face-progress-customPurple-text-color,
+		@face-progress-customPurple-strack-color,
+		@face-progress-customPurple-bar-color
+	)
+}

@@ -1,129 +1,91 @@
-@import "./settings.less";
+@import './settings.less';
 
 .@{prefix} {
+	position: relative;
+	text-align: center;
+    width: 100%;
 }
+	.@{prefix}-F-text {
+		color: @face-progress-text-color;
+		// font-size: 14px;  
+	    font-size: 0.875em;
+		margin: auto;
+	}
+	.@{prefix}-F-text--inset {
+		position: absolute;
+		width: 100%;
+	    margin: auto;
+	    line-height: 1;
+		z-index: 1;
+	    top: 0;
+	    left: 0;
+	}
 
-// 线条样式
+/* line */
 .@{prefix}-line {
-    position: relative;
-    line-height: 1em;
-    display: table;
-    border-collapse: separate;
-    border-collapse: initial;
+	position: relative;
+	width: 100%;
+	margin: auto;
+	box-sizing: border-box;
+}
+.@{prefix}-track {
+	position: relative;
     width: 100%;
-    padding-bottom: .4375em;
-    padding-top: .4375em;
+    // height: 6px;
+    height: 0.375em;
+    margin: auto;
+    border-radius: 9999px; 
+    background-color: @face-progress-mark-color;
 }
-.@{prefix}-line-box {
-    width: 100%;
-    vertical-align: middle;
-    position: relative;
-    display: table-cell;
-    // padding-bottom: 0.3125em;
-    // padding-top: 0.3125em;
-}
-.@{prefix}-line-box-track {
-    position: relative;
-    height: 0.375em; 
-    border-radius: 0.1875em; 
-    background-color: @face-progress-default-color;
-}
-.@{prefix}-line-box-track-bar {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    border-radius: inherit; 
-    text-align: right;
-    transition: all .3s ease-in-out;
-    background-color: @face-progress-primary-color;
-    &:nth-child(3n + 1) {
-        background-color: @face-progress-primary-color;
-    }
-    &:nth-child(3n + 2) {
-        background-color: @face-progress-success-color;
-    }
-    &:nth-child(3n + 3) {
-        background-color: @face-progress-error-color;
-    }
-}
-.@{prefix}-line-box-track-bar-text {
-    color:#fff;
-    font-size: 0.7em;
-    line-height: 1.33333em;
-    padding-right: 0.5em;
-    padding-left: 0.5em;
-    display: block;
-    white-space: nowrap;
-}
-.@{prefix}-line-info {
-    font-size: 0.8em; //14px
-    line-height: 1.25em;
-    display: table-cell;
-    padding-left: 0.78125em;
-    box-sizing: border-box;
-    color: @face-progress-default-text-color;
-    min-width: 4.0625em;
-    white-space: nowrap;
+.@{prefix}-track-bar {
+	position: absolute;
+	height: 100%;
+	border-radius: inherit;
+	transition: all .3s ease-in-out;
+    background-color: @face-progress-bar-default-color;
 }
 
-    
-    // .@{prefix}-line--wave {
-    //     .@{prefix}-line-box-bar {
-    //         @keyframes wave {
-    //           from { background-position: 0 0; }
-    //           to { background-position: 100% 100%;}
-    //         }
-    //         &:before {
-    //             content: "";
-    //             opacity: 0.2;
-    //             position: absolute;
-    //             top: 0; left: 0; right: 0; bottom: 0;
-    //             animation: wave 5s linear infinite;
-    //             background-image: linear-gradient(90deg, @face-progress-default-color 50%, transparent 50%);
-    //             background-size: 0.6em 100%;
-    //         }
-    //     }
-    // }
+/* line group */
+.@{prefix}Group {
+	.@{prefix} {
+		margin-bottom: .5em;
+	}
+}
 
-
-// 圆环样式
+/* circle */
 .@{prefix}-circle {
-    position: relative;
     line-height: 0; // 消除下边间隔
+    position: relative;
+    width: 100%;
+    .@{prefix}-F-text {
+    	// font-size: 24px;
+    	font-size: 1.5em;
+	    display: table;
+	    top: 0;
+	    left: 0;
+	    right: 0;
+	    bottom: 0;
+    }
 }
-.@{prefix}-circle-svg-outer {
+.@{prefix}-circle-svg {
+}
+.@{prefix}-circle-svg-track,
+.@{prefix}-circle-svg-bar {
     stroke-linecap: round ;
-    stroke: @face-progress-default-color ;
-    stroke-width: 6 ;
+    stroke-width: 6px ;
     fill-opacity: 0 ;
     stroke-dasharray: 295.3097094374406px, 295.3097094374406px;
+	d:path("M 50,50 m 0,-47 a 47,47 0 1 1 0,94 a 47,47 0 1 1 0,-94");
+    transition: all .3s ease-in-out;
+}
+.@{prefix}-circle-svg-track {
+    stroke: @face-progress-mark-color;
     stroke-dashoffset: 0px;
-    transition: all .3s ease-in-out;
 }
-.@{prefix}-circle-svg-inner {
-    stroke-linecap: round ;
-    stroke: @face-progress-primary-color;
-    stroke-width: 6 ;
-    fill-opacity: 0 ;
-    stroke-dasharray: 295.3097094374406px, 295.3097094374406px;
+.@{prefix}-circle-svg-bar {
+    stroke: @face-progress-bar-default-color;
     stroke-dashoffset: 295.3097094374406px;
-    transition: all .3s ease-in-out;
-}
-.@{prefix}-circle-info {
-    color: @face-progress-default-hd-color;
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    margin:auto;
-    text-align: center;
-    height: 1.5em;
-    font-size: 1.5em;
-    line-height: 1.5em;
-    width: 89%;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
-/* themes */
-@import "./style.less";
+
+@import './style.less';
